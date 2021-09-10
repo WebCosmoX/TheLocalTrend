@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: var(--yellow);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 18px;
+    box-shadow: 7px 7px 7px 0 rgba(0, 0, 0);
+}
+
+.container i{
+    font-size: 18px;
+}

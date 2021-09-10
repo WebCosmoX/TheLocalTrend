@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 25px;
+    padding: 10px;
+    border: 2px solid var(--yellow);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container img{
+    display: block;
+    border-radius: 5px;
+}
+
+.artist_name{
+    text-transform: capitalize;
+    color: #fff;
+    width: 55%;
+    font-family: var(--opensans);
+    font-size: 14px;
+    font-weight: 600;
+}

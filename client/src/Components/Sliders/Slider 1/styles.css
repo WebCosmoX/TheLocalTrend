@@ -1,0 +1,91 @@
+.swiper-container {
+    width: 100vw;
+    height: max-content;
+    margin-top: 30px;
+}
+
+.swiper-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.song_details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    margin: 120px 18px 0 18px;
+}
+
+.artist_name{
+    font-family: var(--opensans);
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.song_name{
+    font-family: var(--raleway);
+    font-weight: 800;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.stream_now_links{
+    margin-top: 20px;
+    margin-left: 18px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-family: var(--opensans);
+    font-size: 13px;
+}
+
+.stream_now_links span{
+    display: inline-block;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet{
+    background: #fff;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-pagination-bullet-active{
+    background: var(--yellow);
+}
