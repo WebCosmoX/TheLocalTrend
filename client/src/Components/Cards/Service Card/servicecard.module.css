@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-top: 25px;
+    color: #fff;
+}
+
+.container img{
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+.card_header{
+    margin-top: 13px;
+    font-family: var(--raleway);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.card_description{
+    margin-top: 10px;
+    text-align: center;
+    font-family: var(--opensans);
+    font-size: 13px;
+}
