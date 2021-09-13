@@ -1,4 +1,5 @@
 import React from 'react';
+import lottie from 'lottie-web';
 import Navbar from '../../Components/Navbar/Navbar';
 import classes from './homepage.module.css';
 import HeroImageAndroid from '../../Assets/Hero Image-Android.png';
@@ -12,6 +13,7 @@ import Arijit from '../../Assets/Arijit Singh.png';
 import Slider2 from '../../Components/Sliders/Slider 2/Slider2';
 
 export default function HomePage() {
+
     return (
         <>
             {
@@ -94,16 +96,16 @@ export default function HomePage() {
             </section>
 
             {
-                //Workshops Section
+                //Merchandise Section
             }
-            <section className={classes.workshops_section}>
+            <section className={classes.our_merchandise_section}>
                 <div className={classes.section_header}>
-                    workshops
+                    our merchandise
                 </div>
-                <a href="#" className={classes.section_link}>
-                    view all workshops
-                </a>
                 <Slider2 />
+                <h3 className={classes.announcement}>
+                    launching <span> soon ! </span>
+                </h3>
             </section>
         </>
     )

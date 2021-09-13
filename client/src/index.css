@@ -12,6 +12,7 @@ body{
     flex-direction: column;
     align-items: center;
     background: var(--black);
+    overflow-x: hidden;
 }
 
 :root{
@@ -19,6 +20,7 @@ body{
     --white: #ffffff;
     --yellow: #f5d40d;
     --blue: #0C96B7;
+    --red: #ed213a;
     --raleway: 'Raleway', sans-serif;
     --mulish: 'Mulish', sans-serif;
     --opensans: 'Open Sans', sans-serif;
