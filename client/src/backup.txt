@@ -1,0 +1,3 @@
+<div className={classes.semicircle}>
+            <i className="fas fa-heart"></i>
+        </div>

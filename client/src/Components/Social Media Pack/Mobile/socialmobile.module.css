@@ -1,17 +1,54 @@
 .container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 250px;
+    width: 250px;
+    overflow-x: hidden;
+    background-color: transparent;
+}
+
+.semicircle{
+    position: absolute;
+    width: 250px;
+    height: 125px;
+    background: transparent;
+    border-radius: 150px 150px 0 0;
+    bottom: 40px;
+    right: 0;
+    transform: translateX(30%);
+}
+
+.circle{
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    background: var(--yellow);
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width:50px;
     border-radius: 50%;
-    bottom: 20px;
-    right: 18px;
+    font-size: 18px;
     box-shadow: 7px 7px 7px 0 rgba(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    outline: none;
 }
 
-.container i{
-    font-size: 18px;
+.menu_btn{
+    background: var(--yellow);
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out;
+}
+
+.social_links{
+    background: var(--yellow);
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+    color: #000;
+}
+
+.social_links i{
+    transition: all 0.6s ease-in-out;
 }

@@ -5,7 +5,7 @@
 }
 
 .swiper-wrapper {
-    width: 90%;
+    width: max-content;
     height: 100%;
 }
 

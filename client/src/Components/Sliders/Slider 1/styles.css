@@ -70,7 +70,7 @@
     display: flex;
     align-items: center;
     font-family: var(--opensans);
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .stream_now_links span{

@@ -1,12 +1,12 @@
 /* Top Section */
 
-.top_section{
+.top_section {
     width: 100vw;
     height: 90vh;
     position: relative;
 }
 
-.hero_image_mobile{
+.hero_image_mobile {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,14 +15,14 @@
     z-index: -1;
 }
 
-.details{
+.details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 50px 18px;
 }
 
-.details .header{
+.details .header {
     color: #fff;
     font-family: var(--raleway);
     text-transform: uppercase;
@@ -30,11 +30,11 @@
     font-weight: 700;
 }
 
-.details .header span{
+.details .header span {
     color: var(--yellow);
 }
 
-.sub_header{
+.sub_header {
     color: #fff;
     margin-top: 20px;
     font-family: var(--mulish);
@@ -44,22 +44,22 @@
 
 /* Latest Releases Section */
 
-.latest_releases_section{
+.latest_releases_section {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.section_header{
+.section_header {
     font-family: var(--montserrat);
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
     width: max-content;
     padding: 0 10px 10px 10px;
-    border-bottom: 2px solid var(--yellow); 
+    border-bottom: 2px solid var(--yellow);
 }
 
 /* Our Services Section */
@@ -72,7 +72,7 @@
     background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2))
 }
 
-.section_link{
+.section_link {
     margin-top: 25px;
     margin-right: 18px;
     align-self: flex-end;
@@ -83,31 +83,66 @@
     text-transform: capitalize;
 }
 
-.section_link:hover{
+.section_link:hover {
     text-decoration: underline;
 }
 
 /* Our Artists Section */
 
-.our_artists_section{
+.our_artists_section {
     padding: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Workshops Section */
+/* Our Merchandise Section */
 
-.workshops_section{
-    padding: 20px 0;
+.our_merchandise_section {
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom, transparent, rgba(12, 150, 183, 0.5));
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.announcement {
+    margin-top: 20px;
+    color: #fff;
+    font-family: var(--opensans);
+    text-transform: uppercase;
+    animation: 
+    boom 1.5s linear infinite,
+    color 1.5s linear infinite;
+}
+
+@keyframes boom {
+    0% {
+        transform: scale(0.9, 0.9);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(0.9, 0.9);
+    }
+}
+
+@keyframes color {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: red;
+    }
+    100% {
+        color: yellow;
+    }
 }
 
 @media screen and (min-width: 360px) and (min-height: 750px) {
-    .top_section{
+    .top_section {
         height: 80vh;
     }
 }
