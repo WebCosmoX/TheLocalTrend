@@ -1,5 +1,5 @@
 {
-    "name": "pg-app",
+    "name": "the-local-trend",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
@@ -8,7 +8,7 @@
         "dev": "nodemon server.js"
     },
     "keywords": [],
-    "author": "",
+    "author": "Bhargab Nath",
     "license": "ISC",
     "dependencies": {
         "cors": "^2.8.5",

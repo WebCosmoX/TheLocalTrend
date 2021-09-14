@@ -33,8 +33,13 @@ exports.get_service_by_id = async (req, res) => {
 
 exports.update_service = async (req, res) => {
     try {
+        const id = req.params.id;
         const { title, description } = req.body;
-        
+
+        const service = await Service.updateOne(id, {
+            $set: { title, description }
+        });
+
         return res.status(200).json({ service });
     } catch (err) {
         return res.status(500).json({ error: err.msg });
