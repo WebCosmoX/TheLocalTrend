@@ -15,6 +15,12 @@
     z-index: -1;
 }
 
+.hero_image_desktop {
+    position: absolute;
+    z-index: -1;
+    display: none;
+}
+
 .details {
     display: flex;
     flex-direction: column;
@@ -60,6 +66,7 @@
     width: max-content;
     padding: 0 10px 10px 10px;
     border-bottom: 2px solid var(--yellow);
+    align-self: center;
 }
 
 /* Our Services Section */
@@ -96,6 +103,13 @@
     align-items: center;
 }
 
+.cards_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Our Merchandise Section */
 
 .our_merchandise_section {
@@ -103,7 +117,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
     position: relative;
 }
 
@@ -112,9 +125,7 @@
     color: #fff;
     font-family: var(--opensans);
     text-transform: uppercase;
-    animation: 
-    boom 1.5s linear infinite,
-    color 1.5s linear infinite;
+    animation: boom 1.5s linear infinite, color 1.5s linear infinite;
 }
 
 @keyframes boom {
@@ -141,8 +152,103 @@
     }
 }
 
+/* What's New Section */
+
+.whats_new_section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Media Queries */
+
 @media screen and (min-width: 360px) and (min-height: 750px) {
     .top_section {
         height: 80vh;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+
+    /* Top Section */
+    .top_section {
+        height: 95vh;
+    }
+
+    .hero_image_mobile {
+        display: none;
+    }
+
+    .hero_image_desktop {
+        display: block;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .details {
+        margin: 70px 60px;
+        padding: 0 85px;
+        border-left: 4px solid var(--yellow);
+        height: 45%;
+        width: 55%;
+    }
+
+    .details .header {
+        font-size: 60px;
+        font-weight: 600;
+    }
+
+    .sub_header {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    /* Latest Releases Section */
+
+    .latest_releases_section {
+        padding-top: 50px;
+    }
+
+    .section_header {
+        font-size: 16px;
+        border-bottom: 3px solid var(--yellow);
+    }
+
+    /* Our Services Section */
+
+    .our_services_section {
+        padding: 50px 0;
+    }
+
+    /* Our Artists Section */
+
+    .our_artists_section {
+        padding: 50px 0;
+    }
+
+    .cards_container {
+        width: 60%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        place-items: center;
+        grid-column-gap: 80px;
+    }
+
+    /* Our Merchandise Section */
+
+    .our_merchandise_section{
+        
+    }
+
+    /* What's New Section */
+
+    .whats_new_section{
+        padding-top: 30px;
+        align-items: center;
     }
 }

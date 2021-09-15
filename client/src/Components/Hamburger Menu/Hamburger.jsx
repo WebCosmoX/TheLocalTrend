@@ -39,9 +39,6 @@ export default function Hamburger() {
                     <li style={{
                         fontSize: openMenu ? "19px" : "0",
                     }}>About Us</li>
-                    <li style={{
-                        fontSize: openMenu ? "19px" : "0",
-                    }}>Contact Us</li>
                 </ul>
             </div>
         </>

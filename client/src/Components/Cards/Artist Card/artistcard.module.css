@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,16 +10,44 @@
     cursor: pointer;
 }
 
-.container img{
+.container img {
     display: block;
     border-radius: 5px;
+    width: 40%;
+    height: auto;
 }
 
-.artist_name{
+.artist_name {
     text-transform: capitalize;
     color: #fff;
-    width: 55%;
+    width: 45%;
     font-family: var(--opensans);
     font-size: 14px;
     font-weight: 600;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1150px) {
+    .container {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: none;
+        padding: 0;
+    }
+
+    .container img {
+        align-self: center;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .artist_name{
+        margin-top: 12px;
+        font-size: 15px;
+    }
 }
