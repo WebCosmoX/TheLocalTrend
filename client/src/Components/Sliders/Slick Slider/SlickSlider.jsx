@@ -27,6 +27,16 @@ export default class MultipleItems extends Component {
                 dots: true
               }
             },
+
+            {
+              breakpoint: 500,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
         ]
       };
       return (
