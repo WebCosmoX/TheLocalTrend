@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
+const authRoutes = require('./routes/auth');
 const serviceRoutes = require('./routes/services');
 const artistRoutes = require('./routes/artists');
 
@@ -26,6 +27,7 @@ mongoose.connect(dbURI, {
     .then(() => console.log('Mongodb connected...'))
     .catch((err) => console.log(err));
 
+app.use('/api/auth', authRoutes);
 app.use('/api/services', serviceRoutes);
 app.use('/api/artists', artistRoutes);
 

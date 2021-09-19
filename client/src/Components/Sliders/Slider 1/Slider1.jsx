@@ -1,7 +1,11 @@
 import React from "react";
-import AlbumArt from '../../../Assets/Album Art-Android.png';
+import AlbumArt1 from '../../../Assets/Album Art-Android.png';
 import AlbumArt2 from '../../../Assets/Album Art2-Android.png';
 import AlbumArt3 from '../../../Assets/Album Art3-Android.png';
+import AlbumBackdrop1 from '../../../Assets/Album Backdrop1.png';
+import AlbumBackdrop2 from '../../../Assets/Album Backdrop2.png';
+import AlbumBackdrop3 from '../../../Assets/Album Backdrop3.png';
+import RepBackdrop from '../../../Assets/RepBackdrop.png';
 import Spotify from '../../../Assets/Spotify.png';
 import YouTube from '../../../Assets/YouTube.png';
 
@@ -11,7 +15,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
-import "./styles.css";
+import "./styles1.css";
 
 // import Swiper core and required modules
 import SwiperCore, {
@@ -37,7 +41,8 @@ export default function Slider1() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src={AlbumArt} alt="Album Art"></img>
+                    
+                    <img src={AlbumBackdrop1} alt="Album Art" className="album_art_desktop"></img>
                     <div className="overlay">
                         <div className="song_details">
                             <h5 className="artist_name">
@@ -60,7 +65,7 @@ export default function Slider1() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src={AlbumArt2} alt="Album Art"></img>
+                    <img src={AlbumBackdrop2} alt="Album Art" className="album_art_mobile"></img>
                     <div className="overlay">
                         <div className="song_details">
                             <h5 className="artist_name">
@@ -83,7 +88,7 @@ export default function Slider1() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src={AlbumArt3} alt="Album Art"></img>
+                    <img src={AlbumBackdrop3} alt="Album Art" className="album_art_mobile"></img>
                     <div className="overlay">
                         <div className="song_details">
                             <h5 className="artist_name">

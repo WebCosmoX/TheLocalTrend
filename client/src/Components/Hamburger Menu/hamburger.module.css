@@ -1,9 +1,88 @@
-.container{
-    position: relative;
+.btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: transparent;
+    color: var(--yellow);
+    border: none;
+    font-size: 23px;
+    cursor: pointer;
 }
 
-.menu_button{
-    color: var(--yellow);
-    font-size: 20px;
+.close {
+    color: #000;
+    top: 5px;
+    right: 10px;
+}
+
+.menu {
+    position: absolute;
+    color: #000426;
+    font-size: 23px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #f4d50d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%);
+    transition: all 0.5s ease-in-out;
+}
+
+.menu i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+.menu ul {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -240px;
+    list-style-type: none;
+    font-family: var(--mulish);
+    font-weight: 600;
+}
+
+.menu ul li {
+    font-size: 0;
+}
+
+.menu ul li:nth-child(1) {
+    transition: all 0.6s ease-in-out;
+}
+
+.menu ul li:nth-child(2) {
+    transition: all 0.6s ease-in-out;
+}
+
+.menu ul li:nth-child(3) {
+    transition: all 0.6s ease-in-out;
+}
+
+.menu ul li:nth-child(4) {
+    transition: all 0.6s ease-in-out;
+}
+
+.menu ul li:nth-child(5) {
+    transition: all 0.6s ease-in-out;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1150px) {
+    .btn{
+        display: none;
+    }
 }

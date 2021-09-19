@@ -1,17 +1,21 @@
 import React from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import classes from './homepage.module.css';
+import HeroImage from '../../Assets/Hero Image.png';
 import HeroImageAndroid from '../../Assets/Hero Image-Android.png';
 import SocialMobile from '../../Components/Social Media Pack/Mobile/SocialMobile';
 import Slider1 from './../../Components/Sliders/Slider 1/Slider1';
+import SlickSlider from './../../Components/Sliders/Slick Slider/SlickSlider';
 import ServiceCard from '../../Components/Cards/Service Card/ServiceCard';
 import ArtistCard from '../../Components/Cards/Artist Card/ArtistCard';
 import JB from '../../Assets/JB.png';
 import Drake from '../../Assets/Drake.png';
 import Arijit from '../../Assets/Arijit Singh.png';
-import Slider2 from '../../Components/Sliders/Slider 2/Slider2';
+import SocialDesktop from '../../Components/Social Media Pack/Desktop/SocialDesktop';
+import EventLink from '../../Components/Links/EventLink';
 
 export default function HomePage() {
+
     return (
         <>
             {
@@ -20,15 +24,17 @@ export default function HomePage() {
             <section className={classes.top_section}>
                 <Navbar />
                 <img src={HeroImageAndroid} alt="Rockstar" className={classes.hero_image_mobile}></img>
+                <img src={HeroImage} alt="Rockstar" className={classes.hero_image_desktop}></img>
                 <div className={classes.details}>
                     <div className={classes.header}>
                         the <br /> local <span> trend </span>
                     </div>
                     <div className={classes.sub_header}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu magna sem.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor diam ut purus elementum ullamcorper
                     </div>
                 </div>
                 <SocialMobile />
+                <SocialDesktop />
             </section>
 
             {
@@ -48,9 +54,6 @@ export default function HomePage() {
                 <div className={classes.section_header}>
                     our services
                 </div>
-                <a href="#" className={classes.section_link}>
-                    view all services
-                </a>
                 <ServiceCard
                     header="Video Production"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu magna sem. "
@@ -72,38 +75,68 @@ export default function HomePage() {
                 <div className={classes.section_header}>
                     our artists
                 </div>
-                <a href="#" className={classes.section_link}>
-                    view all artists
-                </a>
-                <ArtistCard
-                    artistImage={JB}
-                    artistName="justin bieber"
-                />
-                <ArtistCard
-                    artistImage={Drake}
-                    artistName="drake"
-                />
-                <ArtistCard
-                    artistImage={Arijit}
-                    artistName="arijit singh"
-                />
-                <ArtistCard
-                    artistImage={JB}
-                    artistName="justin bieber"
-                />
+                <div className={classes.cards_container}>
+                    <ArtistCard
+                        artistImage={JB}
+                        artistName="justin bieber"
+                    />
+                    <ArtistCard
+                        artistImage={Drake}
+                        artistName="drake"
+                    />
+                    <ArtistCard
+                        artistImage={Arijit}
+                        artistName="arijit singh"
+                    />
+                    <ArtistCard
+                        artistImage={JB}
+                        artistName="justin bieber"
+                    />
+                    <ArtistCard
+                        artistImage={Drake}
+                        artistName="drake"
+                    />
+                    <ArtistCard
+                        artistImage={Arijit}
+                        artistName="arijit singh"
+                    />
+                </div>
             </section>
 
             {
-                //Workshops Section
+                //Merchandise Section
             }
-            <section className={classes.workshops_section}>
+            <section className={classes.our_merchandise_section}>
                 <div className={classes.section_header}>
-                    workshops
+                    our merchandise
                 </div>
-                <a href="#" className={classes.section_link}>
-                    view all workshops
-                </a>
-                <Slider2 />
+                <SlickSlider />
+                <h3 className={classes.announcement}>
+                    launching <span> soon ! </span>
+                </h3>
+            </section>
+
+            {
+                //What's new Section
+            }
+            <section className={classes.whats_new_section}>
+                <div className={classes.section_header} style={{
+                    marginBottom: '10px',
+                }}>
+                    What's New
+                </div>
+                <EventLink
+                    text="Watch Tavreed live on Saturday from 6pm onwards"
+                />
+                <EventLink
+                    text="Watch Tavreed live on Saturday from 6pm onwards"
+                />
+                <EventLink
+                    text="Watch Tavreed live on Saturday from 6pm onwards"
+                />
+                <EventLink
+                    text="Watch Tavreed live on Saturday from 6pm onwards"
+                />
             </section>
         </>
     )
