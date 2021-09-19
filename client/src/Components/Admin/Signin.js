@@ -1,19 +1,20 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import axios from 'axios'
-import { Redirect } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 
 const Signin = () => {
+    const history = useHistory();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [user, setUser] = useState();
     const [redirectUser, setRedirectUser] = useState(false);
 
     useEffect(() => {
-        const loggedInUser = localStorage.getItem("user");
-        if (loggedInUser) {
-            const foundUser = JSON.parse(loggedInUser);
-            setUser(foundUser);
+        const loggedInUser = localStorage.getItem('user');
+        if(loggedInUser){
+            history.push('/admin');
         }
+       console.log(loggedInUser);
     }, []);
 
     const handleSubmit = async e => {
@@ -27,7 +28,7 @@ const Signin = () => {
             console.log(response.data.result);
             setUser(response.data.result.username);
             setRedirectUser(true);
-            localStorage.setItem('user', response.data.result);
+            localStorage.setItem('user', response.data.result.username);
         } catch (err) {
             throw err;
         }

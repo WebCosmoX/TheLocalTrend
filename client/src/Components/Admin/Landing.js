@@ -37,6 +37,7 @@ const Landing = () => {
         <div className='container'>
             <div className="text-center font-weight-light display-1">Admin Portal</div>
 
+            <h2>Services</h2>
             <table class="table table-hover table-dark table-striped">
                 <thead>
                     <tr className='bg-primary'>
@@ -69,6 +70,10 @@ const Landing = () => {
 
                 </tbody>
             </table>
+
+
+            <h2>Artists</h2>
+
 
         </div>
 

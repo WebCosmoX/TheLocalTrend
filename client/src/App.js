@@ -6,6 +6,7 @@ import { NotFound } from './NotFound/NotFound';
 import Signin from "./Components/Admin/Signin";
 import Landing from "./Components/Admin/Landing";
 import UpdatePage from "./Components/Admin/UpdatePage";
+import AdminRoute from "./Components/Admin/auth/AdminRoute";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/slider" exact component={SlickSlider} />
           <Route path="/admin/signin" exact component={Signin} />
-          <Route path="/admin" exact component={Landing} />
-          <Route exact path='/admin/services/:id/update' component={UpdatePage} />
+          <AdminRoute path="/admin" exact component={Landing} />
+          <AdminRoute exact path='/admin/services/:id/update' component={UpdatePage} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

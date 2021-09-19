@@ -31,6 +31,7 @@ const UpdateService = () => {
 
     return (
         <div>
+            <h2>Service</h2>
             <form>
                 <div className="form-group mb-2">
                     <label>Title</label>
