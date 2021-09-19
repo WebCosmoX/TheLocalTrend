@@ -4,7 +4,7 @@ import classes from './homepage.module.css';
 import HeroImage from '../../Assets/Hero Image.png';
 import HeroImageAndroid from '../../Assets/Hero Image-Android.png';
 import SocialMobile from '../../Components/Social Media Pack/Mobile/SocialMobile';
-import Slider1 from './../../Components/Sliders/Slider 1/Slider1';
+import AutoplaySlider from '../../Components/Sliders/Autoplay Slider/AutoplaySlider';
 import SlickSlider from './../../Components/Sliders/Slick Slider/SlickSlider';
 import ServiceCard from '../../Components/Cards/Service Card/ServiceCard';
 import ArtistCard from '../../Components/Cards/Artist Card/ArtistCard';
@@ -13,6 +13,7 @@ import Drake from '../../Assets/Drake.png';
 import Arijit from '../../Assets/Arijit Singh.png';
 import SocialDesktop from '../../Components/Social Media Pack/Desktop/SocialDesktop';
 import EventLink from '../../Components/Links/EventLink';
+import Footer from '../../Components/Footer/Footer';
 
 export default function HomePage() {
 
@@ -44,7 +45,7 @@ export default function HomePage() {
                 <div className={classes.section_header}>
                     latest releases by our artists
                 </div>
-                <Slider1 />
+                <AutoplaySlider />
             </section>
 
             {
@@ -138,6 +139,8 @@ export default function HomePage() {
                     text="Watch Tavreed live on Saturday from 6pm onwards"
                 />
             </section>
+
+            <Footer />
         </>
     )
 }

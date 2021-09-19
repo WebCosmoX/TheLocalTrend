@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './hamburger.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Hamburger() {
 
@@ -27,18 +28,26 @@ export default function Hamburger() {
                     <i className="fas fa-times"></i>
                 </button>
                 <ul>
-                    <li style={{
-                        fontSize: openMenu ? "19px" : "0",
-                    }}>Home</li>
-                    <li style={{
-                        fontSize: openMenu ? "19px" : "0",
-                    }}>Music</li>
-                    <li style={{
-                        fontSize: openMenu ? "19px" : "0",
-                    }}>Artists</li>
-                    <li style={{
-                        fontSize: openMenu ? "19px" : "0",
-                    }}>About Us</li>
+                    <Link to="/" className={classes.link}>
+                        <li style={{
+                            fontSize: openMenu ? "19px" : "0",
+                        }}>Home</li>
+                    </Link>
+                    <Link to="/" className={classes.link}>
+                        <li style={{
+                            fontSize: openMenu ? "19px" : "0",
+                        }}>Music</li>
+                    </Link>
+                    <Link to="/" className={classes.link}>
+                        <li style={{
+                            fontSize: openMenu ? "19px" : "0",
+                        }}>Artists</li>
+                    </Link>
+                    <Link to="/" className={classes.link}>
+                        <li style={{
+                            fontSize: openMenu ? "19px" : "0",
+                        }}>About Us</li>
+                    </Link>
                 </ul>
             </div>
         </>

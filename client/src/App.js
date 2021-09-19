@@ -1,7 +1,6 @@
 import HomePage from "./Pages/Home Page/HomePage";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Footer from "./Components/Footer/Footer";
-import SlickSlider from "./Components/Sliders/Slick Slider/SlickSlider";
+import ArtistProfile from './Pages/Artist Profile Page/ArtistProfile.jsx';
 
 function App() {
   return (
@@ -9,9 +8,8 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/slider" exact component={SlickSlider} />
+          <Route path="/artist" exact component={ArtistProfile} />
         </Switch>
-        <Footer />
       </Router>
     </div>
   );
