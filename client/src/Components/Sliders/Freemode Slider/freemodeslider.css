@@ -9,7 +9,6 @@
 }
 
 .artist_releases_slide{
-    /* height: 140px; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
