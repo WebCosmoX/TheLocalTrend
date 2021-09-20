@@ -17,6 +17,15 @@ import Footer from '../../Components/Footer/Footer';
 
 export default function HomePage() {
 
+    React.useEffect(() => {
+        scrollToTop();
+    }, []);
+
+    //function to scroll the page to top
+    function scrollToTop () {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <>
             {

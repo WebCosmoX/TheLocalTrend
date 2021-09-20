@@ -1,0 +1,32 @@
+.sidebar {
+    background: var(--yellow);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 11vw;
+    height: 100vh;
+}
+
+.links_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.link {
+    font-size: 15px;
+    font-family: var(--mulish);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--black);
+    margin: 20px 0;
+}
+
+.link:hover{
+    text-decoration: underline;
+}

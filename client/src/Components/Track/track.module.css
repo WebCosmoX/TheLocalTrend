@@ -53,5 +53,31 @@
 }
 
 .stream_links i:hover{
+    cursor: pointer;
     color: var(--yellow);
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1150px) {
+    .container{
+        width: 100%;
+        margin-top: 50px;
+        padding: 0 30px 16px 10px;
+    }
+
+    .track_art{
+        width: 45px;
+        height: 45px;
+    }
+
+    .track_details{
+        width: 70%;
+    }
+
+    .stream_links i{
+        margin-left: 20px;
+        font-size: 20px;
+    }
 }
