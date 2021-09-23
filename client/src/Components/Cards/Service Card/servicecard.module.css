@@ -48,6 +48,8 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        border-left: 4px solid var(--yellow);
+        padding: 10px 0 10px 20px;
     }
 
     .container img{
