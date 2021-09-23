@@ -3,6 +3,7 @@ import classes from './navbar.module.css';
 import LogoMobile from '../../Assets/Logo-Mobile.png';
 import LogoDesktop from '../../Assets/Logo-Desktop.png';
 import Hamburger from '../Hamburger Menu/Hamburger';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
@@ -20,7 +21,8 @@ export default function Navbar() {
             <div className={classes.nav_links}>
                 <a href="#">Home</a>
                 <a href="#">Music</a>
-                <a href="#">Artists</a>
+                {/* <a href="#">Artists</a> */}
+                <Link to='/artist'>Artist</Link>
                 <a href="#">About Us</a>
             </div>
 
