@@ -34,7 +34,7 @@ const Landing = () => {
     }
 
     return (
-        <div className='container'>
+        <div className='container admin-wrapper'>
             <div className="text-center font-weight-light display-1">Admin Portal</div>
 
             <h2>Services</h2>

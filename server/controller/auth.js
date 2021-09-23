@@ -1,6 +1,6 @@
 const users = [{
-    username: 'admin',
-    password: 'ltent@admpw'
+    username: process.env.ADMIN_USERNAME,
+    password: process.env.ADMIN_PASSWORD
 }];
 
 exports.authenticate_user = async (req, res) => {

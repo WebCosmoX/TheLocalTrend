@@ -19,8 +19,8 @@ function App() {
           <Route path="/admin/signin" exact component={Signin} />
           <AdminRoute path="/admin" exact component={Landing} />
           <AdminRoute exact path='/admin/services/:id/update' component={UpdatePage} />
-          <Route component={NotFound} />
           <Route path="/artist" exact component={ArtistProfile} />
+          <Route component={NotFound} />
         </Switch>
       </Router>
     </div>

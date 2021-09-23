@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import axios from 'axios'
 import { Redirect, useHistory } from 'react-router-dom';
+import Auth from './apis/Auth'
 
 const Signin = () => {
     const history = useHistory();
@@ -21,8 +21,8 @@ const Signin = () => {
         try {
             e.preventDefault();
             const user = { username, password };
-            const response = await axios.post(
-                'http://localhost:5000/api/auth',
+            const response = await Auth.post(
+                '/',
                 user
             );
             console.log(response.data.result);
