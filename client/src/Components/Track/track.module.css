@@ -1,0 +1,83 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 93vw;
+    padding: 0 10px 16px 10px;
+    margin-top: 25px;
+    border-bottom: 2px solid var(--grey);
+    color: var(--white);
+}   
+
+.track_art{
+    width: 35px;
+    height: 35px;
+}
+
+.track_details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.track_name{
+    font-family: var(--raleway);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.album_container{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 7px;
+    font-family: var(--mulish);
+    font-size: 15px;
+    color: var(--greyscript);
+}
+
+
+.album_name{
+    margin-left: 7px;
+    text-transform: capitalize;
+}
+
+.stream_links{
+    display: flex;
+    align-items: center;
+}
+
+.stream_links i{
+    margin-left: 12px;
+    font-size: 17px;
+}
+
+.stream_links i:hover{
+    cursor: pointer;
+    color: var(--yellow);
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1150px) {
+    .container{
+        width: 100%;
+        margin-top: 50px;
+        padding: 0 30px 16px 10px;
+    }
+
+    .track_art{
+        width: 45px;
+        height: 45px;
+    }
+
+    .track_details{
+        width: 70%;
+    }
+
+    .stream_links i{
+        margin-left: 20px;
+        font-size: 20px;
+    }
+}

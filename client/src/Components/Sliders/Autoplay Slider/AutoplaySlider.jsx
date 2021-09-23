@@ -15,7 +15,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
-import "./styles1.css";
+import "./autoplayslider.css";
 
 // import Swiper core and required modules
 import SwiperCore, {
@@ -25,7 +25,7 @@ import SwiperCore, {
 // install Swiper modules
 SwiperCore.use([Pagination, Autoplay]);
 
-export default function Slider1() {
+export default function AutoplaySlider() {
 
     return (
         <>
@@ -38,10 +38,9 @@ export default function Slider1() {
                     "disableOnInteraction": false,
                 }}
                 loop={true}
-                className="mySwiper"
+                className="latest_releases_slider"
             >
-                <SwiperSlide>
-                    
+                <SwiperSlide className="latest_releases_slide">
                     <img src={AlbumBackdrop1} alt="Album Art" className="album_art_desktop"></img>
                     <div className="overlay">
                         <div className="song_details">
@@ -64,7 +63,7 @@ export default function Slider1() {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide className="latest_releases_slide">
                     <img src={AlbumBackdrop2} alt="Album Art" className="album_art_mobile"></img>
                     <div className="overlay">
                         <div className="song_details">
@@ -87,7 +86,7 @@ export default function Slider1() {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide className="latest_releases_slide">
                     <img src={AlbumBackdrop3} alt="Album Art" className="album_art_mobile"></img>
                     <div className="overlay">
                         <div className="song_details">

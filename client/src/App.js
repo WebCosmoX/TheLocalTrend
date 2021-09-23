@@ -7,6 +7,7 @@ import Signin from "./Components/Admin/Signin";
 import Landing from "./Components/Admin/Landing";
 import UpdatePage from "./Components/Admin/UpdatePage";
 import AdminRoute from "./Components/Admin/auth/AdminRoute";
+import ArtistProfile from './Pages/Artist Profile Page/ArtistProfile.jsx';
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
           <AdminRoute path="/admin" exact component={Landing} />
           <AdminRoute exact path='/admin/services/:id/update' component={UpdatePage} />
           <Route component={NotFound} />
+          <Route path="/artist" exact component={ArtistProfile} />
         </Switch>
-        <Footer />
       </Router>
     </div>
   );

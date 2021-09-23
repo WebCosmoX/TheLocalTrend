@@ -1,0 +1,212 @@
+.superWrapper{
+    width: 100vw;
+    height: 100%;
+    position: relative;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.artist_image_mobile{
+    display: block;
+    width: 100%;
+    height: 270px;
+}
+
+/* Artist Details Section */
+
+.artist_details_section{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    color: var(--white);
+}
+
+.artist_name{
+    font-family: var(--raleway);
+    font-size: 23px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.artist_role{
+    font-family: var(--mulish);
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-top: 10px;
+    color: var(--yellow);
+}
+
+.artist_bio{
+    font-family: var(--opensans);
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.social_media_links_container{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.left i{
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 12px;
+}
+
+.right{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.right i{
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 12px;
+}
+
+.left i:hover, .right i:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 375px) {
+    .artist_name{
+        font-size: 25px;
+    }
+
+    .artist_role{
+        font-size: 16px;
+    }
+
+    .artist_bio{
+        font-size: 14px;
+    }
+
+    .left i, .right i{
+        font-size: 17px;
+    }
+}
+
+
+/* New Releases Section */
+
+.new_releases_section{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.section_header{
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+    font-size: 15px;
+    color: var(--yellow);
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+/* Popular Tracks Section */
+
+.popular_tracks_section{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1150px) {
+    .superWrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wrapper{
+        width: 80vw;
+        margin-left: 16vw;
+        align-items: flex-start;
+    }
+
+    .artist_image_desktop{
+        width: 55%;
+        height: 95%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    /* Artist Details Section */
+
+    .artist_details_section{
+        position: relative;
+        width: 100%;
+        height: 65vh;
+    }
+
+    .desktopWrapper{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        bottom: 15%;
+        left: 0;
+    }
+
+    .artist_name{
+        font-size: 40px;
+    }
+
+    .artist_role{
+        font-size: 17px;
+    }
+
+    .artist_bio{
+        font-size: 15px;
+        margin-top: 30px;
+    }
+
+    .left i, .right i{
+        font-size: 18px;
+    }
+
+    .social_media_links_container{
+        justify-content: flex-end;
+        margin-top: 70px;
+    }
+
+    .new_releases_section{
+        margin-top: 30px;
+    }
+
+    /* Popular Tracks Section */
+
+    .popular_tracks_section{
+        width: 100%;
+        margin: 50px 0;
+    }
+}

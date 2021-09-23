@@ -10,8 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--white);
     overflow-x: hidden;
+    background: var(--black);
 }
 
 :root {
@@ -20,6 +20,8 @@ body {
     --yellow: #f5d40d;
     --blue: #0C96B7;
     --red: #ed213a;
+    --grey: #333;
+    --greyscript: #c4c4c4;
     --raleway: 'Raleway', sans-serif;
     --mulish: 'Mulish', sans-serif;
     --opensans: 'Open Sans', sans-serif;
