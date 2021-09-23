@@ -5,7 +5,6 @@ import HeroImage from '../../Assets/Hero Image.png';
 import HeroImageAndroid from '../../Assets/Hero Image-Android.png';
 import SocialMobile from '../../Components/Social Media Pack/Mobile/SocialMobile';
 import AutoplaySlider from '../../Components/Sliders/Autoplay Slider/AutoplaySlider';
-import SlickSlider from './../../Components/Sliders/Slick Slider/SlickSlider';
 import ServiceCard from '../../Components/Cards/Service Card/ServiceCard';
 import ArtistCard from '../../Components/Cards/Artist Card/ArtistCard';
 import JB from '../../Assets/JB.png';
@@ -14,15 +13,27 @@ import Arijit from '../../Assets/Arijit Singh.png';
 import SocialDesktop from '../../Components/Social Media Pack/Desktop/SocialDesktop';
 import EventLink from '../../Components/Links/EventLink';
 import Footer from '../../Components/Footer/Footer';
+import MerchSlider from '../../Components/Sliders/Merch Slider/MerchSlider';
+import lottie from 'lottie-web';
 
 export default function HomePage() {
 
+    const animeContainer = React.useRef(null);
+
     React.useEffect(() => {
-        scrollToTop();
+        // scrollToTop();
+
+        lottie.loadAnimation({
+            container: animeContainer.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: require('../../Lottie/hour-glass-lottie.json'),
+        })
     }, []);
 
     //function to scroll the page to top
-    function scrollToTop () {
+    function scrollToTop() {
         window.scrollTo(0, 0);
     }
 
@@ -120,10 +131,16 @@ export default function HomePage() {
                 <div className={classes.section_header}>
                     our merchandise
                 </div>
-                <SlickSlider />
-                <h3 className={classes.announcement}>
-                    launching <span> soon ! </span>
-                </h3>
+                <MerchSlider />
+                <div className={classes.animeWrapper}>
+                    <div className={classes.animeContainer} ref={animeContainer}></div>
+                    <div className={classes.announcement}>
+                        Launching Soon 
+                        <span className={`${classes.circle} ${classes.first_circle}`}></span>
+                        <span className={`${classes.circle} ${classes.second_circle}`}></span>
+                        <span className={`${classes.circle} ${classes.third_circle}`}></span>
+                    </div>
+                </div>
             </section>
 
             {

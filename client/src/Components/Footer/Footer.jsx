@@ -42,7 +42,6 @@ export default function Footer() {
                 </h4>
 
                 <h5 className={classes.copyright}>
-                    <span><i class="far fa-copyright"></i> </span>
                     Copyright 2021 @TheLocalTrend
                 </h5>
             </div>

@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.min.css";
-import "swiper/components/scrollbar/scrollbar.min.css";
 import "./freemodeslider.css";
 
 // import Swiper core and required modules
