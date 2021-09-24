@@ -10,12 +10,9 @@
 }
 
 .latest_releases_slide {
-    height: 33vh;
+    height: 37vh;
     width: 100%;
-    text-align: center;
-    font-size: 18px;
     background: #fff;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -31,7 +28,15 @@
     position: relative;
 }
 
-@media screen and (max-height: 731px) {
+.artist_name{
+    font-size: 10px;
+}
+
+.song_name{
+    font-size: 20px;
+}
+
+@media screen and (min-height: 731px) {
     .latest_releases_slide{
         height: 36vh;
     }
@@ -67,6 +72,7 @@
     font-family: var(--opensans);
     letter-spacing: 1px;
     font-weight: 800;
+    font-size: 16px;
 }
 
 .song_name{
@@ -74,6 +80,7 @@
     font-weight: 800;
     margin-top: 10px;
     text-transform: capitalize;
+    font-size: 23px;
 }
 
 .stream_now_links{
