@@ -1,0 +1,16 @@
+.button{
+    padding: 7px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--mulish);
+    font-size: 15px;
+    border: 2px solid rgba(245, 212, 13, 1);
+    color: rgba(245, 212, 13, 1);
+    cursor: pointer;
+}
+
+.button:hover{
+    border: none;
+    box-shadow: 0 0 3px 3px rgba(245, 212, 13, 1);
+}

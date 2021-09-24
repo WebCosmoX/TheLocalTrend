@@ -15,6 +15,7 @@ import EventLink from '../../Components/Links/EventLink';
 import Footer from '../../Components/Footer/Footer';
 import MerchSlider from '../../Components/Sliders/Merch Slider/MerchSlider';
 import lottie from 'lottie-web';
+import ViewAllButton from '../../Components/Buttons/ViewAll Buttons/ViewAllButton';
 
 export default function HomePage() {
 
@@ -87,6 +88,7 @@ export default function HomePage() {
                     header="Music Distribution"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu magna sem. "
                 />
+                <ViewAllButton text="View All Services" top="40px" />
             </section>
 
             {
@@ -122,6 +124,10 @@ export default function HomePage() {
                         artistName="arijit singh"
                     />
                 </div>
+                <ViewAllButton
+                    text="View All Artists"
+                    top="50px"
+                />
             </section>
 
             {
@@ -135,7 +141,7 @@ export default function HomePage() {
                 <div className={classes.animeWrapper}>
                     <div className={classes.animeContainer} ref={animeContainer}></div>
                     <div className={classes.announcement}>
-                        Launching Soon 
+                        Launching Soon
                         <span className={`${classes.circle} ${classes.first_circle}`}></span>
                         <span className={`${classes.circle} ${classes.second_circle}`}></span>
                         <span className={`${classes.circle} ${classes.third_circle}`}></span>
