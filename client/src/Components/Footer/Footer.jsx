@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './footer.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -7,30 +8,32 @@ export default function Footer() {
             <div className={classes.top}>
                 <div className={classes.content_container}>
                     <div className={classes.header}>Read :</div>
-                    <ul className={classes.list}>
-                        <li>Privacy Policy</li>
-                        <li>Terms and Conditions</li>
-                        <li>About Us</li>
-                    </ul>
+                    <div className={classes.footer_link_container}>
+                        <Link to="/" className={classes.footer_link}>
+                            Privacy Policy
+                        </Link>
+                        <Link to="/" className={classes.footer_link}>
+                            Terms and Conditions
+                        </Link>
+                        <Link to="/" className={classes.footer_link}>
+                            About Us
+                        </Link>
+                    </div>
                 </div>
 
                 <div className={classes.content_container}>
                     <div className={classes.header}>Contact Us :</div>
-                    <ul className={classes.list}>
-                        <p className={classes.content}>
-                            thelocaltrend4you@gmail.com<br />
-                            8638154432, 6284221089
-                        </p>
-                    </ul>
+                    <p className={classes.content}>
+                        thelocaltrend4you@gmail.com<br />
+                        8638154432, 6284221089
+                    </p>
                 </div>
 
                 <div className={classes.content_container}>
                     <div className={classes.header}>Working Office Address :</div>
-                    <ul className={classes.list}>
-                        <p className={classes.content}>
-                            Kailash Bhawan, Basisthapur bylane no - 2 , Opp. Rambha Madhav Vivah Bhawan , Hatigaon, Guwahati, Assam , 781038.
-                        </p>
-                    </ul>
+                    <p className={classes.content}>
+                        Kailash Bhawan, Basisthapur bylane no - 2 , Opp. Rambha Madhav Vivah Bhawan , Hatigaon, Guwahati, Assam , 781038.
+                    </p>
                 </div>
             </div>
 

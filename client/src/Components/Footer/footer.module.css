@@ -27,7 +27,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-    width: 60%;
+    width: 70%;
 }
 
 .header{
@@ -36,28 +36,29 @@
     font-size: 17px;
 }
 
-.list{
-    list-style: none;
+.footer_link_container{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 7px;
 }
 
-.list li{
+.footer_link{
+    margin-top: 3px;
     font-family: var(--opensans);
+    color: var(--grey);
+    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    color: #333;
-    cursor: pointer;
 }
 
 .content{
-    color: #333;
+    color: var(--grey);
     text-align: center;
     font-family: var(--opensans);
     font-size: 14px;
     font-weight: 600;
+    margin-top: 7px;
 }
 
 .line{
@@ -68,6 +69,7 @@
 }
 
 .powered{
+    font-size: 17px;
     margin-top: 16px;
     font-weight: 800;
     font-family: var(--mulish);
@@ -75,9 +77,10 @@
 }
 
 .copyright{
-    margin-top: 25px;
+    margin-top: 20px;
     font-weight: 800;
     font-family: var(--mulish);
+    font-size: 14px;
 }
 
 
