@@ -6,6 +6,7 @@ import Landing from "./Components/Admin/Landing";
 import UpdatePage from "./Components/Admin/UpdatePage";
 import AdminRoute from "./Components/Admin/auth/AdminRoute";
 import ArtistProfile from './Pages/Artist Profile Page/ArtistProfile.jsx';
+import AllArtists from './Pages/All Artists Page/AllArtists.jsx';
 
 function App() {
   return (
@@ -13,10 +14,11 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/artist" exact component={ArtistProfile} />
+          <Route path="/artist/all" exact component={AllArtists} />
           <Route path="/admin/signin" exact component={Signin} />
           <AdminRoute path="/admin" exact component={Landing} />
           <AdminRoute exact path='/admin/services/:id/update' component={UpdatePage} />
-          <Route path="/artist" exact component={ArtistProfile} />
           <Route component={NotFound} />
         </Switch>
       </Router>

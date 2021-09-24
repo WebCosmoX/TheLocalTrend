@@ -38,7 +38,7 @@ export default function Hamburger() {
                             fontSize: openMenu ? "19px" : "0",
                         }}>Music</li>
                     </Link>
-                    <Link to="/" className={classes.link}>
+                    <Link to="/artist/all" className={classes.link}>
                         <li style={{
                             fontSize: openMenu ? "19px" : "0",
                         }}>Artists</li>

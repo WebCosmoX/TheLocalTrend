@@ -22,7 +22,7 @@ export default function HomePage() {
     const animeContainer = React.useRef(null);
 
     React.useEffect(() => {
-        // scrollToTop();
+        scrollToTop();
 
         lottie.loadAnimation({
             container: animeContainer.current,

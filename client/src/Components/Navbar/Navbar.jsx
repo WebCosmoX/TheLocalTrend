@@ -3,6 +3,7 @@ import classes from './navbar.module.css';
 import LogoMobile from '../../Assets/Logo-Mobile.png';
 import LogoDesktop from '../../Assets/Logo-Desktop.png';
 import Hamburger from '../Hamburger Menu/Hamburger';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
@@ -18,10 +19,10 @@ export default function Navbar() {
                 //nav links for desktop devices
             }
             <div className={classes.nav_links}>
-                <a href="#">Home</a>
-                <a href="#">Music</a>
-                <a href="#">Artists</a>
-                <a href="#">About Us</a>
+                <Link to="/">Home</Link>
+                <Link to="#">Music</Link>
+                <Link to="/artist/all">Artists</Link>
+                <Link to="#">About Us</Link>
             </div>
 
             <div className={classes.yellow_box}></div>
