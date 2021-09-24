@@ -33,7 +33,7 @@
 }
 
 .song_name{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 @media screen and (min-height: 731px) {
@@ -72,7 +72,7 @@
     font-family: var(--opensans);
     letter-spacing: 1px;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .song_name{
@@ -80,7 +80,7 @@
     font-weight: 800;
     margin-top: 10px;
     text-transform: capitalize;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 .stream_now_links{
@@ -90,7 +90,7 @@
     display: flex;
     align-items: center;
     font-family: var(--opensans);
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .stream_now_links span{

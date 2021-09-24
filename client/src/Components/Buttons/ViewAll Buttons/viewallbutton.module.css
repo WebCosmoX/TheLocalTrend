@@ -1,10 +1,10 @@
 .button{
-    padding: 7px 16px;
+    padding: 7px 13px;
     background: transparent;
     border: none;
     border-radius: 10px;
     font-family: var(--mulish);
-    font-size: 15px;
+    font-size: 14px;
     border: 2px solid rgba(245, 212, 13, 1);
     color: rgba(245, 212, 13, 1);
     cursor: pointer;

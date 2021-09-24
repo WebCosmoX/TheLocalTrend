@@ -7,9 +7,9 @@ export default function ServiceCard({ header, description }) {
         <div className={classes.container}>
             <img src={ServiceImage} alt="Service"></img>
             <div className={classes.card_details}>
-                <h3 className={classes.card_header}>
+                <h4 className={classes.card_header}>
                     {header}
-                </h3>
+                </h4>
                 <p className={classes.card_description}>
                     {description}
                 </p>
