@@ -9,7 +9,7 @@ const Landing = () => {
 
     useEffect(() => {
         const fetchServices = async () => {
-            const data = await axios.get('http://localhost:5000/api/services');
+            const data = await ServiceFinder.get('/');
             console.log(data.data.services);
             setServices(data.data.services);
         }
