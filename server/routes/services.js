@@ -29,22 +29,6 @@ router.delete('/:service_id', ServiceController.delete_service);
 
 router.post('/upload-image/:serviceId', upload, ServiceController.upload_image);
 
-router.get('/images/:key', (req, res) => {
-    console.log(req.params);
-    const key = req.params.key;
-    const readStream = getFileStream(key);
-
-    readStream.pipe(res);
-});
-
-
-const getFileStream = (fileKey) => {
-    const downloadParams = {
-        Key: fileKey,
-        Bucket: process.env.AWS_BUCKET_NAME
-    }
-
-    return s3.getObject(downloadParams).createReadStream();
-}
+router.get('/images/:key', ServiceController.get_image);
 
 module.exports = router;

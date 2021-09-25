@@ -97,3 +97,21 @@ exports.upload_image = async (req, res) => {
         return res.status(200).json({ data, service });
     });
 }
+
+exports.get_image = async (req, res) => {
+    console.log(req.params);
+    const key = req.params.key;
+    const readStream = getFileStream(key);
+
+    readStream.pipe(res);
+}
+
+
+const getFileStream = (fileKey) => {
+    const downloadParams = {
+        Key: fileKey,
+        Bucket: process.env.AWS_BUCKET_NAME
+    }
+
+    return s3.getObject(downloadParams).createReadStream();
+}
