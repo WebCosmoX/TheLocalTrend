@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import ServiceFinder from './apis/Service';
 
@@ -10,7 +9,7 @@ const Landing = () => {
     useEffect(() => {
         const fetchServices = async () => {
             const data = await ServiceFinder.get('/');
-            console.log(data.data.services);
+            console.log({ data });
             setServices(data.data.services);
         }
         fetchServices();
