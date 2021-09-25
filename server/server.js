@@ -23,7 +23,7 @@ const serviceRoutes = require('./routes/services');
 const artistRoutes = require('./routes/artists');
 
 // const dbURI = 'mongodb://localhost/localtrend';
-const dbURI = process.env.MONGODB_URI;
+const dbURI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.njbpr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
