@@ -54,6 +54,11 @@
     font-weight: 600;
 }
 
+.link{
+    text-decoration: none;
+    color: var(--black);
+}
+
 .menu ul li {
     font-size: 0;
 }
@@ -76,4 +81,13 @@
 
 .menu ul li:nth-child(5) {
     transition: all 0.6s ease-in-out;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1150px) {
+    .btn{
+        display: none;
+    }
 }

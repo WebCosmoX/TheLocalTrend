@@ -1,0 +1,38 @@
+.container {
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.container i {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 20px;
+    color: var(--yellow);
+}
+
+.link {
+    display: inline-block;
+    text-align: top;
+    color: #fff;
+    font-family: var(--mulish);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--yellow);
+}
+
+/* Media queries */
+
+@media screen and (min-width: 1150px) {
+
+    .container i{
+        font-size: 20px;
+    }
+
+    .link{
+        font-size: 16px;
+    }
+}

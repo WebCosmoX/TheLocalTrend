@@ -52,3 +52,11 @@
 .social_links i{
     transition: all 0.6s ease-in-out;
 }
+
+
+/* Media Queries */
+@media screen and (min-width: 1150px) {
+    .container{
+        display: none;
+    }
+}

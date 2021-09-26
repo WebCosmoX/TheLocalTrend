@@ -1,0 +1,51 @@
+.artist_releases_container{
+    width: 90vw;
+    margin-top: 20px;
+}
+
+.swiper-wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+.artist_releases_slide{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.artist_releases_slide img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.video_title{
+    margin: 15px 0 0 0;
+    color: var(--white);
+    font-family: var(--mulish);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 20px 0 5px;
+    text-transform: capitalize;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1150px) {
+    .artist_releases_container{
+        width: 80vw;
+        margin-top: 30px; 
+    }
+
+    .artist_releases_slide{
+        height: max-content;
+    }
+
+    .video_title{
+        font-size: 15px;
+    }
+}

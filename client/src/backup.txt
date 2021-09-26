@@ -1,3 +1,2 @@
-<div className={classes.semicircle}>
-            <i className="fas fa-heart"></i>
-        </div>
+<img src={AlbumArt} alt="Album Art" className="album_art_mobile"></img>
+
