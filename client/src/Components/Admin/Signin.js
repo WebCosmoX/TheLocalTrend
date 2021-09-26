@@ -11,10 +11,10 @@ const Signin = () => {
 
     useEffect(() => {
         const loggedInUser = localStorage.getItem('user');
-        if(loggedInUser){
+        if (loggedInUser) {
             history.push('/admin');
         }
-       console.log(loggedInUser);
+        console.log(loggedInUser);
     }, []);
 
     const handleSubmit = async e => {
@@ -25,6 +25,7 @@ const Signin = () => {
                 '/',
                 user
             );
+            console.log({ url: Auth.defaults.baseURL });
             console.log(response.data.result);
             setUser(response.data.result.username);
             setRedirectUser(true);
@@ -37,7 +38,7 @@ const Signin = () => {
     return (
 
         <Fragment>
-            {redirectUser && <Redirect to='/admin' />}
+            {/* {redirectUser && <Redirect to='/admin' />} */}
 
             <div className='container mt-5 mb-5'>
                 <form>
