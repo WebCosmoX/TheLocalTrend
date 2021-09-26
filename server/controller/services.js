@@ -1,5 +1,6 @@
-const Service = require('../models/service');
 const aws = require("aws-sdk");
+
+const Service = require('../models/service');
 
 const s3 = new aws.S3({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -105,7 +106,6 @@ exports.get_image = async (req, res) => {
 
     readStream.pipe(res);
 }
-
 
 const getFileStream = (fileKey) => {
     const downloadParams = {

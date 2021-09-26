@@ -13,14 +13,6 @@ const storage = multer.memoryStorage({
 
 const upload = multer({ storage }).single('image');
 
-const aws = require("aws-sdk");
-
-const s3 = new aws.S3({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-});
-
-
 router.get('/', ServiceController.get_all_services);
 router.post('/add-service', ServiceController.create_service);
 router.get('/:service_id', ServiceController.get_service_by_id);
