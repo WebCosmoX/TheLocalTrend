@@ -16,9 +16,18 @@ const ArtistSchema = mongoose.Schema({
     youtube_url: {
         type: String
     },
-    images: [{
+    fb_url: {
+        type: String,
+    },
+    insta_url: {
         type: String
-    }],
+    },
+    twitter_url: {
+        type: String,
+    },
+    profile_image: {
+        type: String
+    },
 });
 
 module.exports = mongoose.model('artist', ArtistSchema);

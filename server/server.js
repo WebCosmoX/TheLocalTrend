@@ -4,6 +4,13 @@ dotenv.config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const aws = require("aws-sdk");
+
+aws.config.update({
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  region: process.env.AWS_REGION,
+});
 
 const app = express();
 
@@ -16,7 +23,7 @@ const serviceRoutes = require('./routes/services');
 const artistRoutes = require('./routes/artists');
 
 // const dbURI = 'mongodb://localhost/localtrend';
-const dbURI = process.env.MONGODB_URI;
+const dbURI = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.njbpr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
