@@ -25,7 +25,7 @@ const Signin = () => {
                 '/',
                 user
             );
-            console.log({ url: Auth.defaults.baseURL });
+            console.log({ url: Auth });
             console.log(response.data.result);
             setUser(response.data.result.username);
             setRedirectUser(true);
