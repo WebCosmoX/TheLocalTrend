@@ -1,6 +1,5 @@
 #!/bin/sh
 sudo git pull origin backend-dev
-sudo npm install
 echo 'Entering client folder...'
 cd client
 echo 'Installing client dependencies...'
