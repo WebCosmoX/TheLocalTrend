@@ -22,7 +22,7 @@ export default function Navbar() {
                 <Link to="/">Home</Link>
                 <Link to="#">Music</Link>
                 <Link to="/artist/all">Artists</Link>
-                <Link to="#">About Us</Link>
+                <Link to="/about">About Us</Link>
             </div>
 
             <div className={classes.yellow_box}></div>
