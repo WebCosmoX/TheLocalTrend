@@ -38,7 +38,7 @@ const Signin = () => {
     return (
 
         <Fragment>
-            {/* {redirectUser && <Redirect to='/admin' />} */}
+            {redirectUser && <Redirect to='/admin' />}
 
             <div className='container mt-5 mb-5'>
                 <form>
