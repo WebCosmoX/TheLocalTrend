@@ -25,7 +25,7 @@ const Landing = () => {
         try {
             await ServiceFinder.delete(`/${id}`);
             setServices(
-                services.filter(service => service._id != id)
+                services.filter(service => service._id !== id)
             );
         } catch (err) {
             console.error(err);

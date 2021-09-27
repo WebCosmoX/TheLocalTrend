@@ -31,14 +31,22 @@ const Signin = () => {
             setRedirectUser(true);
             localStorage.setItem('user', response.data.result.username);
         } catch (err) {
+            console.log(err);
             throw err;
+        }
+    }
+
+
+    const redirectUserToAdminPortal = () => {
+        if (redirectUser) {
+            return <Redirect to='/admin' />
         }
     }
 
     return (
 
         <Fragment>
-            {redirectUser && <Redirect to='/admin' />}
+            {redirectUserToAdminPortal()}
 
             <div className='container mt-5 mb-5'>
                 <form>
