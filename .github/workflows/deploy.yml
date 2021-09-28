@@ -20,7 +20,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           instance-ids: ${{ secrets.INSTANCE_ID }}
 
-          comment: Deploy the master branch
+          comment: Deploy the backend-dev branch
           working-directory: /home/ubuntu/apps/tlt/server
           command: /bin/sh ./deploy.sh
 
