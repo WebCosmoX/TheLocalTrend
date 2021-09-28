@@ -48,7 +48,7 @@ const Signin = () => {
         <Fragment>
             {redirectUserToAdminPortal()}
 
-            <div className='container mt-5 mb-5'>
+            <div className='mt-5 mb-5'>
                 <form>
                     <div className="mb-3">
                         <label className="form-label">Username</label>

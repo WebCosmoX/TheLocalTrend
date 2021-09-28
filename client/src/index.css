@@ -30,6 +30,25 @@ body {
 }
 
 .admin-wrapper {
-    background-color: #1b0885 !important;
+    /* width: 100vw; */
+    background-color: #2e6357 !important;
     color: #ffffff !important;
+}
+
+.admin-services-wrapper {
+    width: 100vw !important;
+    background-color: #2e6357 !important;
+    color: #ffffff !important;
+}
+
+.admin-artists-wrapper {
+    width: 100vw !important;
+    background-color: #2e6357 !important;
+    color: #ffffff !important;
+}
+
+.btn-warning {
+    color: #ffffff;
+    background-color: rgb(112, 22, 6);
+    border-color: #331f01
 }
