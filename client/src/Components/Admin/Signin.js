@@ -46,7 +46,7 @@ const Signin = () => {
     return (
 
         <Fragment>
-            {/* {redirectUserToAdminPortal()} */}
+            {redirectUserToAdminPortal()}
 
             <div className='mt-5 mb-5'>
                 <form>
