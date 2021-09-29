@@ -5,7 +5,8 @@ const ArtistSchema = mongoose.Schema({
         type: String,
     },
     bio: {
-        type: String
+        type: String,
+        maxlength: 235
     },
     role: {
         type: String
@@ -28,6 +29,23 @@ const ArtistSchema = mongoose.Schema({
     profile_image: {
         type: String
     },
+    songs:[{
+        song_name: {
+            type: String
+        },
+        album_name: {
+            type: String
+        },
+        song_spotify_url: {
+            type: String
+        },
+        song_youtube_url: {
+            type: String
+        },
+        song_image: {
+            type: String
+        }
+    }]
 },
     { timestamps: true }
 );
