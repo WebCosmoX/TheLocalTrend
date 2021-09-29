@@ -28,6 +28,8 @@ const ArtistSchema = mongoose.Schema({
     profile_image: {
         type: String
     },
-});
+},
+    { timestamps: true }
+);
 
 module.exports = mongoose.model('artist', ArtistSchema);

@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import ArtistFinder from './apis/Artist';
 
 const Artists = () => {
@@ -40,12 +40,15 @@ const Artists = () => {
             <div className="container admin-artists-wrapper">
 
                 <h2>Artists</h2>
+                <Link className="btn btn-warning mt-2 mb-2" to='/admin/artists/add-artist'>Add a new artist</Link>
+
                 <table class="table table-hover table-dark table-striped">
                     <thead>
                         <tr className='bg-primary'>
                             <th scope='col'>Name</th>
                             <th scope='col'>Bio</th>
                             <th scope='col'>Role</th>
+                            <th scope='col'>Image</th>
                             <th scope='col'>Edit</th>
                             <th scope='col'>Delete</th>
                         </tr>
@@ -57,6 +60,12 @@ const Artists = () => {
                                 <td>{artist.name}</td>
                                 <td>{artist.bio}</td>
                                 <td>{artist.role}</td>
+                                <td>
+                                    {
+                                        artist.profile_image && <a target='_blank' href={`https://www.thelocaltrendent.com/api/artists/images/${artist.profile_image}`}>See Image</a>
+                                    }
+
+                                </td>
                                 <td>
                                     <button
                                         className="btn btn-dark"

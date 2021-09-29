@@ -1,8 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link, useHistory, useParams } from 'react-router-dom';
-import ServiceFinder from './apis/Service';
+import ArtistFinder from './apis/Artist';
 
-const UploadServiceImage = () => {
+const UploadArtistImage = () => {
     const history = useHistory();
     const [image, setImage] = useState('');
     const { id } = useParams();
@@ -16,24 +16,24 @@ const UploadServiceImage = () => {
     const handleSubmit = async e => {
         e.preventDefault();
         const formData = new FormData();
-        formData.append('image', image);
-        const updatedService = await ServiceFinder.post(`/upload-image/${id}`, formData,
+        formData.append('profile_image', image);
+        const updatedArtist = await ArtistFinder.post(`/upload-image/${id}`, formData,
             {
                 headers: {
                     "Content-type": "multipart/form-data",
                 },
 
             });
-        console.log({ image, formData, updatedService});
-        history.push(`/admin/services/${id}/update`);
+        console.log({ image, formData, updatedArtist});
+        history.push(`/admin/artists`);
     }
 
     return (
         <Fragment>
 
-            <div className='container admin-services-wrapper'>
-                <h2>Upload Service Image</h2>
-                <Link className="btn btn-warning mt-2 mb-2" to={`/admin/services/${id}/update`}>Go Back</Link>
+            <div className='container admin-artists-wrapper'>
+                <h2>Upload Artist Image</h2>
+                <Link className="btn btn-warning mt-2 mb-2" to={`/admin/artists/${id}/update`}>Go Back</Link>
                 <form>
                     <div className="form-group mb-2">
                         <label>Image</label>
@@ -47,4 +47,4 @@ const UploadServiceImage = () => {
     )
 }
 
-export default UploadServiceImage;
+export default UploadArtistImage;

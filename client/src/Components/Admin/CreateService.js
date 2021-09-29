@@ -34,7 +34,7 @@ const CreateService = () => {
                         <label>Description</label>
                         <input type="text" value={description} onChange={e => setDescription(e.target.value)} className="form-control" />
                     </div>
-                    <button type='submit' onClick={handleSubmit} className="btn btn-primary mt-2">Save</button>
+                    <button type='submit' onClick={handleSubmit} className="btn btn-primary mt-2 mb-2">Add Service</button>
                 </form>
             </div>
 

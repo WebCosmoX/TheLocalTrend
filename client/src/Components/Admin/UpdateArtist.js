@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import ArtistFinder from './apis/Artist';
 
 const UpdateArtist = () => {
@@ -35,6 +35,10 @@ const UpdateArtist = () => {
     return (
         <div className='container admin-services-wrapper'>
             <h2>Artist</h2>
+
+            <Link className="btn btn-warning mt-2 mb-2" to='/admin/artists'>Go Back</Link>
+            <Link className="btn btn-warning m-2" to={`/admin/artists/${id}/upload-image`}>Upload Image</Link>
+
             <form>
                 <div className="form-group mb-2">
                     <label>Name</label>
