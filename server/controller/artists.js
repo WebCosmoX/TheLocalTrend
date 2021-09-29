@@ -1,3 +1,7 @@
+/**
+ * @author Bhargab Nath <bhargabnath691@gmail.com>
+ */
+
 const aws = require("aws-sdk");
 
 const Artist = require('../models/artist');
@@ -47,11 +51,18 @@ exports.get_artist_by_id = async (req, res) => {
 exports.update_artist = async (req, res) => {
     try {
         const id = req.params.artist_id;
-        const { name, bio, role, spotify_url, youtube_url } = req.body;
+        console.log(id);
+        const { name, bio, role,
+            // spotify_url, youtube_url 
+        } = req.body;
 
-        const artist = await Artist.updateOne(id, {
-            $set: { name, bio, role, spotify_url, youtube_url }
-        });
+        const artist = await Artist.findByIdAndUpdate(id, {
+            $set: { name, bio, role }
+        }, { new: true });
+
+        // console.log({ artist });
+
+        await artist.save();
 
         return res.status(200).json({ artist });
     } catch (err) {

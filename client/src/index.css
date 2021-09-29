@@ -30,6 +30,31 @@ body {
 }
 
 .admin-wrapper {
-    background-color: #1b0885 !important;
+    width: 100vw;
+    background-color: #023025 !important;
     color: #ffffff !important;
+}
+
+.admin-services-wrapper {
+    width: 100vw !important;
+    background-color: #023025 !important;
+    color: #ffffff !important;
+}
+
+.admin-artists-wrapper {
+    width: 100vw !important;
+    background-color: #023025 !important;
+    color: #ffffff !important;
+}
+
+.btn-warning {
+    color: #ffffff;
+    background-color: rgb(96, 2, 139);
+    border-color: #331f01
+}
+
+.btn-warning:hover {
+    color: #ffffff;
+    background-color: rgb(223, 22, 179);
+    border-color: #160e01
 }

@@ -19,6 +19,8 @@ import ViewAllButton from '../../Components/Buttons/ViewAll Buttons/ViewAllButto
 
 export default function HomePage() {
 
+    console.log({ env: process.env });
+
     const animeContainer = React.useRef(null);
 
     React.useEffect(() => {
