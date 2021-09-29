@@ -9,7 +9,12 @@ const Services = () => {
 
     useEffect(() => {
         const fetchServices = async () => {
-            const data = await ServiceFinder.get('/');
+            const data = await ServiceFinder.get('/', {
+                headers: {
+                    'Content-Type': 'application/json;charset=UTF-8',
+                    "Access-Control-Allow-Origin": "*"
+                }
+            });
             console.log({ data });
             setServices(data.data.services);
         }
@@ -40,7 +45,7 @@ const Services = () => {
             <div className="container admin-services-wrapper">
                 <h2>Services</h2>
                 <Link className="btn btn-warning mt-2 mb-2" to='/admin/services/add-service'>Add a new service</Link>
-                <table class="table table-hover table-dark table-striped">
+                <table className="table table-hover table-dark table-striped">
                     <thead>
                         <tr className='bg-primary'>
                             <th scope='col'>Title</th>
@@ -58,7 +63,7 @@ const Services = () => {
                                 <td>{service.description}</td>
                                 <td>
                                     {
-                                        service.image && <a target='_blank' href={`http://localhost:5000/api/services/images/${service.image}`}>See Image</a>
+                                        service.image && <a target='_blank' href={`https://www.thelocaltrendent.com/api/services/images/${service.image}`}>See Image</a>
                                     }
 
                                 </td>
