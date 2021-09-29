@@ -1,3 +1,7 @@
+/**
+ * @author Bhargab Nath <bhargabnath691@gmail.com>
+ */
+
 const aws = require("aws-sdk");
 
 const Artist = require('../models/artist');

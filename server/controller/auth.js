@@ -1,3 +1,7 @@
+/**
+ * @author Bhargab Nath <bhargabnath691@gmail.com>
+ */
+
 const users = [{
     username: process.env.ADMIN_USERNAME,
     password: process.env.ADMIN_PASSWORD
