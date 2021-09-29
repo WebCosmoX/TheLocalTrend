@@ -3,7 +3,7 @@ sudo git pull origin backend-dev
 echo 'Entering client folder...'
 echo '*************************'
 echo '*************************'
-cd client
+cd .. && client
 echo 'Installing client dependencies...'
 echo '*************************'
 echo '*************************'
