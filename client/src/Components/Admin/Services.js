@@ -52,7 +52,7 @@ const Services = () => {
                     </thead>
                     <tbody>
 
-                        {services.length > 0 && services.map(service => (
+                        {services?.length > 0 && services.map(service => (
                             <tr>
                                 <td>{service.title}</td>
                                 <td>{service.description}</td>

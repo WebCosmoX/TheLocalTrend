@@ -28,8 +28,8 @@ const Signin = () => {
             console.log({ url: Auth });
             console.log(response.data.result);
             setUser(response.data.result.username);
-            setRedirectUser(true);
             localStorage.setItem('user', response.data.result.username);
+            setRedirectUser(true);
         } catch (err) {
             console.log(err);
             throw err;
@@ -46,7 +46,7 @@ const Signin = () => {
     return (
 
         <Fragment>
-            {redirectUserToAdminPortal()}
+            {/* {redirectUserToAdminPortal()} */}
 
             <div className='mt-5 mb-5'>
                 <form>
@@ -74,7 +74,7 @@ const Signin = () => {
                         type="submit"
                         className="btn btn-primary"
                         onClick={(e) => handleSubmit(e)}
-                    >Submit</button>
+                    >Login</button>
                 </form>
             </div>
         </Fragment>

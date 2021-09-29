@@ -52,7 +52,7 @@ const Artists = () => {
                     </thead>
                     <tbody>
 
-                        {artists.length > 0 && artists.map(artist => (
+                        {artists?.length > 0 && artists.map(artist => (
                             <tr>
                                 <td>{artist.name}</td>
                                 <td>{artist.bio}</td>
