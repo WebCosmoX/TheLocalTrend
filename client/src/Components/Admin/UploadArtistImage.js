@@ -15,6 +15,7 @@ const UploadArtistImage = () => {
 
     const handleSubmit = async e => {
         e.preventDefault();
+
         const formData = new FormData();
         formData.append('profile_image', image);
         const updatedArtist = await ArtistFinder.post(`/upload-image/${id}`, formData,
@@ -24,7 +25,7 @@ const UploadArtistImage = () => {
                 },
 
             });
-        console.log({ image, formData, updatedArtist});
+        console.log({ image, formData, updatedArtist });
         history.push(`/admin/artists`);
     }
 

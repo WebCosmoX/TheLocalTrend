@@ -15,6 +15,7 @@ import CreateArtist from "./Components/Admin/CreateArtist";
 import UploadServiceImage from "./Components/Admin/UploadServiceImage";
 import UploadArtistImage from "./Components/Admin/UploadArtistImage";
 import AboutUs from "./Pages/About Us Page/AboutUs";
+import AddSong from "./Components/Admin/AddSong";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <AdminRoute exact path='/admin/services/:id/update' component={UpdateService} />
           <AdminRoute exact path='/admin/services/:id/upload-image' component={UploadServiceImage} />
           <AdminRoute exact path='/admin/artists/:id/upload-image' component={UploadArtistImage} />
+          <AdminRoute exact path='/admin/artists/:id/add-song' component={AddSong} />
           <AdminRoute exact path='/admin/artists/:id/update' component={UpdateArtist} />
           <Route component={NotFound} />
         </Switch>

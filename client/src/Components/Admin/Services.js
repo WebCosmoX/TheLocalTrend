@@ -45,45 +45,51 @@ const Services = () => {
             <div className="container admin-services-wrapper">
                 <h2>Services</h2>
                 <Link className="btn btn-warning mt-2 mb-2" to='/admin/services/add-service'>Add a new service</Link>
-                <table className="table table-hover table-dark table-striped">
-                    <thead>
-                        <tr className='bg-primary'>
-                            <th scope='col'>Title</th>
-                            <th scope='col'>Description</th>
-                            <th scope='col'>Image</th>
-                            <th scope='col'>Edit</th>
-                            <th scope='col'>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
 
-                        {services?.length > 0 && services.map(service => (
-                            <tr>
-                                <td>{service.title}</td>
-                                <td>{service.description}</td>
-                                <td>
-                                    {
-                                        service.image && <a target='_blank' href={`https://www.thelocaltrendent.com/api/services/images/${service.image}`}>See Image</a>
-                                    }
+                <div className="table-responsive-sm table-responsive-md table-responsive-lg">
 
-                                </td>
-                                <td>
-                                    <button
-                                        className="btn btn-dark"
-                                        onClick={e => updateService(e, service._id)}
-                                    >Edit</button>
-                                </td>
-                                <td>
-                                    <button
-                                        className="btn btn-danger"
-                                        onClick={e => deleteService(e, service._id)}
-                                    >Delete</button>
-                                </td>
+                    <table className="table table-hover table-dark table-striped">
+                        <thead>
+                            <tr className='bg-primary'>
+                                <th scope='col'>Title</th>
+                                <th scope='col'>Description</th>
+                                <th scope='col'>Image</th>
+                                <th scope='col'>Edit</th>
+                                <th scope='col'>Delete</th>
                             </tr>
-                        ))}
+                        </thead>
+                        <tbody>
 
-                    </tbody>
-                </table>
+                            {services?.length > 0 && services.map(service => (
+                                <tr>
+                                    <td>{service.title}</td>
+                                    <td>{service.description}</td>
+                                    <td>
+                                        {
+                                            service.image && <a target='_blank' href={`https://www.thelocaltrendent.com/api/services/images/${service.image}`}>See Image</a>
+                                        }
+
+                                    </td>
+                                    <td>
+                                        <button
+                                            className="btn btn-dark"
+                                            onClick={e => updateService(e, service._id)}
+                                        >Edit</button>
+                                    </td>
+                                    <td>
+                                        <button
+                                            className="btn btn-danger"
+                                            onClick={e => deleteService(e, service._id)}
+                                        >Delete</button>
+                                    </td>
+                                </tr>
+                            ))}
+
+                        </tbody>
+                    </table>
+
+                </div>
+
             </div>
 
 

@@ -21,4 +21,7 @@ router.delete('/:artist_id', ArtistController.delete_artist);
 router.post('/upload-image/:artistId', upload, ArtistController.upload_image);
 router.get('/images/:key', ArtistController.get_image);
 
+router.put('/:artistId/add-song', ArtistController.add_song);
+router.get('/get/recent-songs', ArtistController.get_recent_songs);
+
 module.exports = router;

@@ -120,6 +120,41 @@ exports.get_image = async (req, res) => {
     readStream.pipe(res);
 }
 
+exports.add_song = async (req, res) => {
+    try {
+        const artistId = req.params.artistId;
+        const artist = await Artist.findById(artistId);
+
+        const { song_name, album_name, song_spotify_url, song_youtube_url } = req.body;
+
+        console.log(req.body);
+        console.log({ artist });
+
+        artist.songs.unshift(req.body);
+
+        await artist.save();
+
+        return res.status(200).json({ artist });
+    } catch (err) {
+        return res.status(500).json({ error: err.msg });
+    }
+}
+
+exports.get_recent_songs = async (req, res) => {
+    try {
+        const artists = await Artist.find({
+            "createdAt":
+            {
+                $gte: new Date((new Date().getTime() - (10 * 24 * 60 * 60 * 1000)))
+            }
+        }).sort({ createdAt: 1 }).limit(100).select('songs');
+        // console.log({ });
+        return res.status(200).json({ artists });
+    } catch (err) {
+        return res.status(500).json({ error: err.msg });
+    }
+}
+
 const getFileStream = (fileKey) => {
     const downloadParams = {
         Key: fileKey,

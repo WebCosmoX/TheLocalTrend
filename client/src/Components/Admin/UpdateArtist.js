@@ -38,6 +38,7 @@ const UpdateArtist = () => {
 
             <Link className="btn btn-warning mt-2 mb-2" to='/admin/artists'>Go Back</Link>
             <Link className="btn btn-warning m-2" to={`/admin/artists/${id}/upload-image`}>Upload Image</Link>
+            <Link className="btn btn-warning m-2" to={`/admin/artists/${id}/add-song`}>Add Songs</Link>
 
             <form>
                 <div className="form-group mb-2">

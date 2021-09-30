@@ -44,6 +44,10 @@ const ArtistSchema = mongoose.Schema({
         },
         song_image: {
             type: String
+        },
+        date: {
+            type: Date,
+            default: Date.now
         }
     }]
 },
