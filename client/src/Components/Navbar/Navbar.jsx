@@ -20,7 +20,7 @@ export default function Navbar() {
             }
             <div className={classes.nav_links}>
                 <Link to="/">Home</Link>
-                <Link to="#">Music</Link>
+                <Link to="/">Music</Link>
                 <Link to="/artist/all">Artists</Link>
                 <Link to="/about">About Us</Link>
             </div>
