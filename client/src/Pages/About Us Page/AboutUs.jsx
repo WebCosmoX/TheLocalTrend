@@ -41,11 +41,15 @@ export default function AboutUs() {
             <div className={classes.wrapper}>
                 <h4 className={classes.wrapper_header}>our services</h4>
                 <div className={classes.services_container}>
+
                     {services.map(item => {
+                        let imageURL = `https://www.thelocaltrendent.com/api/services/images/${item.image}`;
+                        console.log(imageURL);
                         return <ServiceCard2
                             key={item.id}
                             header={item.title}
                             body={item.description}
+                            image={imageURL}
                         />
                     })}
                 </div>
