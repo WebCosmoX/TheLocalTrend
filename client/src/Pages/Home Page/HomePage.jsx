@@ -90,7 +90,11 @@ export default function HomePage() {
                     header="Music Distribution"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu magna sem. "
                 />
-                <ViewAllButton text="View All Services" top="40px" />
+                <ViewAllButton
+                    text="View All Services"
+                    top="40px"
+                    link="/"
+                />
             </section>
 
             {
@@ -129,6 +133,7 @@ export default function HomePage() {
                 <ViewAllButton
                     text="View All Artists"
                     top="50px"
+                    link="/artist/all"
                 />
             </section>
 

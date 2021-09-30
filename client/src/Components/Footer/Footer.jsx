@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className={classes.container}>
             <div className={classes.top}>
-                <div className={classes.content_container}>
+                <div className={`${classes.content_container} ${classes.read}`}>
                     <div className={classes.header}>Read :</div>
                     <div className={classes.footer_link_container}>
                         <Link to="/" className={classes.footer_link}>
@@ -15,13 +15,13 @@ export default function Footer() {
                         <Link to="/" className={classes.footer_link}>
                             Terms and Conditions
                         </Link>
-                        <Link to="/" className={classes.footer_link}>
+                        <Link to="/about" className={classes.footer_link}>
                             About Us
                         </Link>
                     </div>
                 </div>
 
-                <div className={classes.content_container}>
+                <div className={`${classes.content_container} ${classes.contact_us}`}>
                     <div className={classes.header}>Contact Us :</div>
                     <p className={classes.content}>
                         thelocaltrend4you@gmail.com<br />
@@ -29,7 +29,7 @@ export default function Footer() {
                     </p>
                 </div>
 
-                <div className={classes.content_container}>
+                <div className={`${classes.content_container} ${classes.office_address}`}>
                     <div className={classes.header}>Working Office Address :</div>
                     <p className={classes.content}>
                         Kailash Bhawan, Basisthapur bylane no - 2 , Opp. Rambha Madhav Vivah Bhawan , Hatigaon, Guwahati, Assam , 781038.
