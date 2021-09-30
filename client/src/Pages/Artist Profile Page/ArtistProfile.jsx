@@ -28,7 +28,7 @@ export default function ArtistProfile() {
         if (width >= 320 && width <= 480) {
             setIsMobile(true);
         }
-        else if (width >= 1150) {
+        else if (width >= 990) {
             setIsDesktop(true);
         }
     }

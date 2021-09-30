@@ -23,7 +23,7 @@ export default function AboutUs() {
     function fetchServices() {
         baseurl.get('services')
             .then(data => {
-                console.log(data.data.services);
+                // console.log(data.data.services);
                 setServices(data.data.services);
             })
     }
@@ -42,11 +42,14 @@ export default function AboutUs() {
                 <h4 className={classes.wrapper_header}>our services</h4>
                 <div className={classes.services_container}>
                     {services.map(item => {
+                        let imageURL = `https://www.thelocaltrendent.com/api/services/images/${item.image}`;
+                        console.log(imageURL);
                         return <ServiceCard2
-                            key={item.id}
-                            header={item.title}
-                            body={item.description}
-                        />
+                        key={item.id}
+                        header={item.title}
+                        body={item.description}
+                        image={imageURL}
+                    />
                     })}
                 </div>
             </div>
