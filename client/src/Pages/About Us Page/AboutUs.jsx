@@ -3,15 +3,29 @@ import classes from './aboutus.module.css';
 import Navbar from '../../Components/Navbar/Navbar';
 import ServiceCard2 from '../../Components/Cards/Service Card2/ServiceCard2';
 import Footer from '../../Components/Footer/Footer';
+import baseurl from '../../api.config.js';
 
 export default function AboutUs() {
 
+    const [services, setServices] = React.useState([]);
+    const [imageID, setImageID] = React.useState("");
+
     React.useEffect(() => {
         scrollToTop();
+        fetchServices();
     }, []);
 
     function scrollToTop() {
         window.scrollTo(0, 0);
+    }
+
+    //fetch services from the db
+    function fetchServices() {
+        baseurl.get('services')
+            .then(data => {
+                console.log(data.data.services);
+                setServices(data.data.services);
+            })
     }
 
     return (
@@ -27,22 +41,13 @@ export default function AboutUs() {
             <div className={classes.wrapper}>
                 <h4 className={classes.wrapper_header}>our services</h4>
                 <div className={classes.services_container}>
-                    <ServiceCard2
-                        header="artist management"
-                        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nibh, maximus."
-                    />
-                    <ServiceCard2
-                        header="artist management"
-                        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nibh, maximus."
-                    />
-                    <ServiceCard2
-                        header="artist management"
-                        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nibh, maximus."
-                    />
-                    <ServiceCard2
-                        header="artist management"
-                        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc urna nibh, maximus."
-                    />
+                    {services.map(item => {
+                        return <ServiceCard2
+                            key={item.id}
+                            header={item.title}
+                            body={item.description}
+                        />
+                    })}
                 </div>
             </div>
 
