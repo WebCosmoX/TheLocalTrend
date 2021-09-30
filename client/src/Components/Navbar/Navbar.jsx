@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <nav className={classes.navbar}>
             <img src={LogoMobile} alt="Logo Mobile" className={classes.logo_mobile}></img>
-            <img src={LogoDesktop} alt="Logo Mobile" className={classes.logo_desktop}></img>
+            <img src={LogoMobile} alt="Logo Mobile" className={classes.logo_desktop}></img>
             {
                 //hamburger menu for mobile devices
             }

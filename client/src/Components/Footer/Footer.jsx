@@ -12,7 +12,7 @@ export default function Footer() {
                         <Link to="/" className={classes.footer_link}>
                             Privacy Policy
                         </Link>
-                        <Link to="/" className={classes.footer_link}>
+                        <Link to="/tnc" className={classes.footer_link}>
                             Terms and Conditions
                         </Link>
                         <Link to="/about" className={classes.footer_link}>
