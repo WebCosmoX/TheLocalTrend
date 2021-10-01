@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <nav className={classes.navbar}>
             <img src={LogoMobile} alt="Logo Mobile" className={classes.logo_mobile}></img>
-            <img src={LogoDesktop} alt="Logo Mobile" className={classes.logo_desktop}></img>
+            <img src={LogoMobile} alt="Logo Mobile" className={classes.logo_desktop}></img>
             {
                 //hamburger menu for mobile devices
             }
@@ -20,7 +20,7 @@ export default function Navbar() {
             }
             <div className={classes.nav_links}>
                 <Link to="/">Home</Link>
-                <Link to="#">Music</Link>
+                <Link to="/">Music</Link>
                 <Link to="/artist/all">Artists</Link>
                 <Link to="/about">About Us</Link>
             </div>

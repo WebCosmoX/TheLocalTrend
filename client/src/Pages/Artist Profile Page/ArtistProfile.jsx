@@ -13,6 +13,7 @@ export default function ArtistProfile() {
     const [isDesktop, setIsDesktop] = React.useState(false);
     const [width, setWidth] = React.useState(window.innerWidth);
 
+
     React.useEffect(() => {
         window.addEventListener("resize", setWidth(window.innerWidth));
         checkWindowSize();
@@ -34,7 +35,7 @@ export default function ArtistProfile() {
     }
 
     //function to scroll the page to top
-    function scrollToTop () {
+    function scrollToTop() {
         window.scrollTo(0, 0);
     }
 

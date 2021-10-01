@@ -8,7 +8,6 @@ import baseurl from '../../api.config.js';
 export default function AboutUs() {
 
     const [services, setServices] = React.useState([]);
-    const [imageID, setImageID] = React.useState("");
 
     React.useEffect(() => {
         scrollToTop();
@@ -23,7 +22,6 @@ export default function AboutUs() {
     function fetchServices() {
         baseurl.get('services')
             .then(data => {
-                // console.log(data.data.services);
                 setServices(data.data.services);
             })
     }
