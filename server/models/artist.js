@@ -30,25 +30,8 @@ const ArtistSchema = mongoose.Schema({
         type: String
     },
     songs:[{
-        song_name: {
-            type: String
-        },
-        album_name: {
-            type: String
-        },
-        song_spotify_url: {
-            type: String
-        },
-        song_youtube_url: {
-            type: String
-        },
-        song_image: {
-            type: String
-        },
-        date: {
-            type: Date,
-            default: Date.now
-        }
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'song'
     }]
 },
     { timestamps: true }

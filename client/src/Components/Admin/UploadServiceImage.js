@@ -24,7 +24,7 @@ const UploadServiceImage = () => {
                 },
 
             });
-        console.log({ image, formData, updatedService});
+        console.log({ image, formData, updatedService });
         history.push(`/admin/services/${id}/update`);
     }
 
