@@ -1,27 +1,29 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+    const { pathname } = useLocation();
+
     return (
         <Fragment>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <Link class="navbar-brand" to="/admin">Admin Portal</Link>
-                    <button class="navbar-toggler" type="button" >
-                        <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-end">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="/admin">Admin Portal</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarScroll">
-                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" >
-                            <li class="nav-item">
-                                <Link class="nav-link active" to='/admin'>Home</Link>
+                    <div className="collapse navbar-collapse" id="navbarScroll">
+                        <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" >
+                            <li className="nav-item">
+                                <Link className={`nav-link ${pathname === '/admin' ? 'active' : null}`} to='/admin'>Home</Link>
                             </li>
 
-                            <li class="nav-item">
-                                <Link class="nav-link" to="/admin/services">Services</Link>
+                            <li className="nav-item">
+                                <Link className={`nav-link ${pathname === '/admin/services' ? 'active' : null}`} to="/admin/services">Services</Link>
                             </li>
 
-                            <li class="nav-item">
-                                <Link class="nav-link" to="/admin/artists">Artists</Link>
+                            <li className="nav-item">
+                                <Link className={`nav-link ${pathname === '/admin/artists' ? 'active' : null}`} to="/admin/artists">Artists</Link>
                             </li>
                         </ul>
 

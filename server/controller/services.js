@@ -1,3 +1,7 @@
+/**
+ * @author Bhargab Nath <bhargabnath691@gmail.com>
+ */
+
 const aws = require("aws-sdk");
 
 const Service = require('../models/service');

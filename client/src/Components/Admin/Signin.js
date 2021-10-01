@@ -25,22 +25,30 @@ const Signin = () => {
                 '/',
                 user
             );
-            console.log({ url: Auth.defaults.baseURL });
+            console.log({ url: Auth });
             console.log(response.data.result);
             setUser(response.data.result.username);
-            setRedirectUser(true);
             localStorage.setItem('user', response.data.result.username);
+            setRedirectUser(true);
         } catch (err) {
+            console.log(err);
             throw err;
+        }
+    }
+
+
+    const redirectUserToAdminPortal = () => {
+        if (redirectUser) {
+            return <Redirect to='/admin' />
         }
     }
 
     return (
 
         <Fragment>
-            {/* {redirectUser && <Redirect to='/admin' />} */}
+            {redirectUserToAdminPortal()}
 
-            <div className='container mt-5 mb-5'>
+            <div className='mt-5 mb-5'>
                 <form>
                     <div className="mb-3">
                         <label className="form-label">Username</label>
@@ -66,7 +74,7 @@ const Signin = () => {
                         type="submit"
                         className="btn btn-primary"
                         onClick={(e) => handleSubmit(e)}
-                    >Submit</button>
+                    >Login</button>
                 </form>
             </div>
         </Fragment>

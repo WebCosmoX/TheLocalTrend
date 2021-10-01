@@ -15,7 +15,7 @@ aws.config.update({
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 const authRoutes = require('./routes/auth');

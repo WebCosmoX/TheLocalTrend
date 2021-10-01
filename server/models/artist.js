@@ -5,7 +5,8 @@ const ArtistSchema = mongoose.Schema({
         type: String,
     },
     bio: {
-        type: String
+        type: String,
+        maxlength: 235
     },
     role: {
         type: String
@@ -28,6 +29,12 @@ const ArtistSchema = mongoose.Schema({
     profile_image: {
         type: String
     },
-});
+    songs:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'song'
+    }]
+},
+    { timestamps: true }
+);
 
 module.exports = mongoose.model('artist', ArtistSchema);

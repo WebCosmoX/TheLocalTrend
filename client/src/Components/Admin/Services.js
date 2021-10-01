@@ -1,32 +1,38 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import ArtistFinder from './apis/Artist';
 
-const Artists = () => {
+import ServiceFinder from './apis/Service';
+
+const Services = () => {
     const history = useHistory();
-    const [artists, setArtists] = useState([]);
+    const [services, setServices] = useState([]);
 
     useEffect(() => {
-        const fetchArtists = async () => {
-            const data = await ArtistFinder.get('/');
+        const fetchServices = async () => {
+            const data = await ServiceFinder.get('/', {
+                headers: {
+                    'Content-Type': 'application/json;charset=UTF-8',
+                    "Access-Control-Allow-Origin": "*"
+                }
+            });
             console.log({ data });
-            setArtists(data.data.artists);
+            setServices(data.data.services);
         }
 
-        fetchArtists();
+        fetchServices();
     }, []);
 
-    const updateArtist = async (e, id) => {
+    const updateService = async (e, id) => {
         e.stopPropagation();
-        history.push(`/admin/artists/${id}/update`);
+        history.push(`/admin/services/${id}/update`);
     }
 
-    const deleteArtist = async (e, id) => {
+    const deleteService = async (e, id) => {
         e.stopPropagation();
         try {
-            await ArtistFinder.delete(`/${id}`);
-            setArtists(
-                artists.filter(artist => artist._id !== id)
+            await ServiceFinder.delete(`/${id}`);
+            setServices(
+                services.filter(service => service._id !== id)
             );
         } catch (err) {
             console.error(err);
@@ -36,20 +42,17 @@ const Artists = () => {
     return (
         <Fragment>
 
-
-            <div className="container admin-artists-wrapper">
-
-                <h2>Artists</h2>
-                <Link className="btn btn-warning mt-2 mb-2" to='/admin/artists/add-artist'>Add a new artist</Link>
+            <div className="container admin-services-wrapper">
+                <h2>Services</h2>
+                <Link className="btn btn-warning mt-2 mb-2" to='/admin/services/add-service'>Add a new service</Link>
 
                 <div className="table-responsive-sm table-responsive-md table-responsive-lg">
 
-                    <table class="table table-hover table-dark table-striped">
+                    <table className="table table-hover table-dark table-striped">
                         <thead>
                             <tr className='bg-primary'>
-                                <th scope='col'>Name</th>
-                                <th scope='col'>Bio</th>
-                                <th scope='col'>Role</th>
+                                <th scope='col'>Title</th>
+                                <th scope='col'>Description</th>
                                 <th scope='col'>Image</th>
                                 <th scope='col'>Edit</th>
                                 <th scope='col'>Delete</th>
@@ -57,27 +60,26 @@ const Artists = () => {
                         </thead>
                         <tbody>
 
-                            {artists?.length > 0 && artists.map(artist => (
+                            {services?.length > 0 && services.map(service => (
                                 <tr>
-                                    <td>{artist.name}</td>
-                                    <td>{artist.bio}</td>
-                                    <td>{artist.role}</td>
+                                    <td>{service.title}</td>
+                                    <td>{service.description}</td>
                                     <td>
                                         {
-                                            artist.profile_image && <a target='_blank' href={`https://www.thelocaltrendent.com/api/artists/images/${artist.profile_image}`}>See Image</a>
+                                            service.image && <a target='_blank' href={`https://www.thelocaltrendent.com/api/services/images/${service.image}`}>See Image</a>
                                         }
 
                                     </td>
                                     <td>
                                         <button
                                             className="btn btn-dark"
-                                            onClick={e => updateArtist(e, artist._id)}
+                                            onClick={e => updateService(e, service._id)}
                                         >Edit</button>
                                     </td>
                                     <td>
                                         <button
                                             className="btn btn-danger"
-                                            onClick={e => deleteArtist(e, artist._id)}
+                                            onClick={e => deleteService(e, service._id)}
                                         >Delete</button>
                                     </td>
                                 </tr>
@@ -85,6 +87,7 @@ const Artists = () => {
 
                         </tbody>
                     </table>
+
                 </div>
 
             </div>
@@ -94,4 +97,4 @@ const Artists = () => {
     )
 }
 
-export default Artists;
+export default Services;
