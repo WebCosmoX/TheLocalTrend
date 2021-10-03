@@ -7,7 +7,7 @@ export default function Footer() {
         <div className={classes.container}>
             <div className={classes.top}>
                 <div className={`${classes.content_container} ${classes.read}`}>
-                    <div className={classes.header}>Read :</div>
+                    <div className={classes.header}>Read</div>
                     <div className={classes.footer_link_container}>
                         <Link to="/" className={classes.footer_link}>
                             Privacy Policy

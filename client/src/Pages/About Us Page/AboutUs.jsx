@@ -87,7 +87,7 @@ export default function AboutUs() {
                             let imageURL = `https://www.thelocaltrendent.com/api/services/images/${item.image}`;
                             console.log(imageURL);
                             return <ServiceCard2
-                                key={item.id}
+                                key={item._id}
                                 header={item.title}
                                 body={item.description}
                                 image={imageURL}

@@ -12,7 +12,7 @@ export default function Navbar() {
     window.addEventListener('scroll', handleNavStyle);
 
     function handleNavStyle() {
-        if (window.scrollY >= 70) {
+        if (window.scrollY >= 100) {
             setNavScrolled(true);
         } else {
             setNavScrolled(false);
@@ -38,7 +38,6 @@ export default function Navbar() {
             }
             <div className={classes.nav_links}>
                 <Link to="/">Home</Link>
-                <Link to="/">Music</Link>
                 <Link to="/artist/all">Artists</Link>
                 <Link to="/about">About Us</Link>
             </div>

@@ -9,28 +9,28 @@
 
 .container img{
     display: block;
-    width: 80%;
-    height: auto;
+    width: 200px;
+    height: 190px;
 }
 
 .card_details{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 0px;
 }
 
 .card_header{
-    margin-top: 13px;
-    font-family: var(--raleway);
+    font-family: var(--opensans);
     text-transform: capitalize;
     font-weight: 600;
 }
 
 .card_description{
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
     font-family: var(--opensans);
-    font-size: 13px;
+    font-size: 14px;
 }
 
 
@@ -40,8 +40,8 @@
     .container{
         flex-direction: row;
         justify-content: space-between;
-        width: 70%;
-        margin-top: 50px;
+        width: 60%;
+        margin-top: 90px;
     }
 
     .card_details{
@@ -53,8 +53,8 @@
     }
 
     .container img{
-        width: 25%;
-        height: auto;
+        width: 250px;
+        height: 200px;
     }
 
     .card_header{
@@ -69,6 +69,6 @@
 
 @media screen and (min-width: 1350px) {
     .container{
-        width: 60%;
+        width: 45%;
     }
 }

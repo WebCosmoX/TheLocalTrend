@@ -29,7 +29,7 @@ export default function AllArtists() {
     //function to scroll the page to top
     function scrollToTop() {
         window.scrollTo(0, 0);
-    }<Navbar />
+    }
 
     //function to fetch artist profile information
     function fetchArtistDetails() {
@@ -66,13 +66,10 @@ export default function AllArtists() {
                 !loading && !error &&
                 <div className={classes.artist_card_container}>
                     {artists.map(item => {
-                        let imageURL = `https://www.thelocaltrendent.com/api/artists/images/${item.profile_image}`;
                         return <ArtistCard
                             key={item._id}
                             id={item._id}
                             data={item}
-                            artistImage={imageURL}
-                            artistName={item.name}
                         />
                     })}
                 </div>
