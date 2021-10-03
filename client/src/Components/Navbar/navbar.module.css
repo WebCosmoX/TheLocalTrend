@@ -1,6 +1,6 @@
 .navbar{
     width: 100vw;
-    background: var(--navblack);
+    background: transparent;
     display: flex;
     align-items: center;
     padding: 13px 18px;
@@ -72,8 +72,8 @@
     .yellow_box{
         display: block;
         position: absolute;
-        height: 70%;
-        width: 5%;
+        height: 100%;
+        width: 6%;
         top: 0;
         right: 0;
         background: var(--yellow);

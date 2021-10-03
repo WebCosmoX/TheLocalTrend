@@ -22,7 +22,7 @@ export default function Footer() {
                 </div>
 
                 <div className={`${classes.content_container} ${classes.contact_us}`}>
-                    <div className={classes.header}>Contact Us :</div>
+                    <div className={classes.header}>Contact Us</div>
                     <p className={classes.content}>
                         thelocaltrend4you@gmail.com<br />
                         8638154432, 6284221089
@@ -30,7 +30,7 @@ export default function Footer() {
                 </div>
 
                 <div className={`${classes.content_container} ${classes.office_address}`}>
-                    <div className={classes.header}>Working Office Address :</div>
+                    <div className={classes.header}>Working Office Address</div>
                     <p className={classes.content}>
                         Kailash Bhawan, Basisthapur bylane no - 2 , Opp. Rambha Madhav Vivah Bhawan , Hatigaon, Guwahati, Assam , 781038.
                     </p>

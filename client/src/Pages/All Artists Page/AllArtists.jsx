@@ -51,8 +51,8 @@ export default function AllArtists() {
         <div className={classes.container}>
             <Navbar />
             <h4 className={classes.header}>All Artists</h4>
-            {
-                loading &&
+            { 
+                loading && !error &&
                 <div className={classes.loader_container}>
                     <BeatLoader
                         color={loaderColor}
@@ -63,7 +63,7 @@ export default function AllArtists() {
                 </div>
             }
             {
-                !loading &&
+                !loading && !error &&
                 <div className={classes.artist_card_container}>
                     {artists.map(item => {
                         let imageURL = `https://www.thelocaltrendent.com/api/artists/images/${item.profile_image}`;

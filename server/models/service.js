@@ -10,6 +10,8 @@ const ServiceSchema = mongoose.Schema({
     image: {
         type: String
     }
-});
+},
+    { timestamps: true }
+);
 
 module.exports = mongoose.model('service', ServiceSchema);

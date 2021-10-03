@@ -5,7 +5,7 @@ import ServiceImage from '../../../Assets/Service Image.png';
 export default function ServiceCard2({ header, body, image }) {
     return (
         <div className={classes.container}>
-            <img src={image} alt="Service Name" className={classes.image}></img>
+            <img src={image} alt={header} className={classes.image}></img>
             <div className={classes.details_container}>
                 <h5 className={classes.header}>{header}</h5>
                 <p className={classes.body}>

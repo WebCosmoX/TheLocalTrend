@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import ServiceFinder from './apis/Service';
 
 const UpdateService = () => {
@@ -26,12 +26,15 @@ const UpdateService = () => {
         });
         console.log(title);
         console.log(updatedService);
-        history.push('/admin');
+        history.push('/admin/services');
     }
 
     return (
-        <div>
+        <div className='container admin-services-wrapper'>
+
             <h2>Service</h2>
+            <Link className="btn btn-warning mt-2 mb-2" to='/admin/services'>Go Back</Link>
+            <Link className="btn btn-warning m-2" to={`/admin/services/${id}/upload-image`}>Upload Image</Link>
             <form>
                 <div className="form-group mb-2">
                     <label>Title</label>
@@ -44,6 +47,7 @@ const UpdateService = () => {
                 <button type='submit' onClick={handleSubmit} className="btn btn-primary mt-2">Save</button>
             </form>
         </div>
+        
     )
 }
 
