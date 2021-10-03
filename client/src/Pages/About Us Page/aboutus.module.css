@@ -28,6 +28,11 @@
     padding: 0 40px 7px 0;
     border-bottom: 3px solid var(--yellow);
     font-weight: 500;
+    font-size: 18px;
+}
+
+.top_header{
+    margin-top: 90px;
 }
 
 .wrapper_body{

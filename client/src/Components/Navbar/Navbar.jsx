@@ -6,8 +6,26 @@ import Hamburger from '../Hamburger Menu/Hamburger';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+
+    const [navScrolled, setNavScrolled] = React.useState(false);
+
+    window.addEventListener('scroll', handleNavStyle);
+
+    function handleNavStyle() {
+        if (window.scrollY >= 70) {
+            setNavScrolled(true);
+        } else {
+            setNavScrolled(false);
+        }
+    }
+
     return (
-        <nav className={classes.navbar}>
+        <nav
+            className={classes.navbar}
+            style={{
+                background: navScrolled ? 'var(--navblack)' : 'transparent',
+            }}
+        >
             <img src={LogoMobile} alt="Logo Mobile" className={classes.logo_mobile}></img>
             <img src={LogoMobile} alt="Logo Mobile" className={classes.logo_desktop}></img>
             {

@@ -29,7 +29,7 @@ export default function AllArtists() {
     //function to scroll the page to top
     function scrollToTop() {
         window.scrollTo(0, 0);
-    }
+    }<Navbar />
 
     //function to fetch artist profile information
     function fetchArtistDetails() {
