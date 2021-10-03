@@ -29,6 +29,7 @@ const Services = () => {
 
     const deleteService = async (e, id) => {
         e.stopPropagation();
+        alert('Are you sure to delete this item?');
         try {
             await ServiceFinder.delete(`/${id}`);
             setServices(
