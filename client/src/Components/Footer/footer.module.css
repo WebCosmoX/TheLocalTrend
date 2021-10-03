@@ -90,6 +90,7 @@
     font-weight: 800;
     font-family: var(--mulish);
     cursor: pointer;
+    color: var(--black);
 }
 
 .copyright{

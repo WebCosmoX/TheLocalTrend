@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/artist" exact component={ArtistProfile} />
+          <Route path="/artist/details/:id" exact component={ArtistProfile} />
           <Route path="/artist/all" exact component={AllArtists} />
           <Route path="/about" exact component={AboutUs} />
           <Route path="/tnc" exact component={TnC} />

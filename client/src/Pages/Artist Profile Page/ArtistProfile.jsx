@@ -6,18 +6,22 @@ import Track from '../../Components/Track/Track';
 import Footer from '../../Components/Footer/Footer';
 import FreemodeSlider from '../../Components/Sliders/Freemode Slider/FreemodeSlider';
 import Sidebar from '../../Components/Sidebar/Sidebar';
+import { useLocation } from 'react-router-dom';
 
 export default function ArtistProfile() {
 
     const [isMobile, setIsMobile] = React.useState(false);
     const [isDesktop, setIsDesktop] = React.useState(false);
     const [width, setWidth] = React.useState(window.innerWidth);
+    const data = useLocation().state;
+    let imageURL = `https://www.thelocaltrendent.com/api/artists/images/${data.profile_image}`;
 
 
     React.useEffect(() => {
         window.addEventListener("resize", setWidth(window.innerWidth));
         checkWindowSize();
         scrollToTop();
+        console.log(data.bio);
 
         return () => {
             window.removeEventListener("resize", setWidth(window.innerWidth));
@@ -53,7 +57,7 @@ export default function ArtistProfile() {
                 }
                 {
                     isMobile &&
-                    <img src={ArtistAndroid} alt="Artist Name" className={classes.artist_image_mobile}></img>
+                    <img src={imageURL} alt="Artist Name" className={classes.artist_image_mobile}></img>
                 }
                 {
                     //Artist details section
@@ -61,17 +65,17 @@ export default function ArtistProfile() {
                 <section className={classes.artist_details_section}>
                     {
                         isDesktop &&
-                        <img src={ArtistAndroid} alt="Artist Name" className={classes.artist_image_desktop}></img>
+                        <img src={imageURL} alt="Artist Name" className={classes.artist_image_desktop}></img>
                     }
                     <div className={classes.desktopWrapper}>
                         <div className={classes.artist_name}>
-                            pincool
+                            {data.name}
                         </div>
                         <div className={classes.artist_role}>
-                            music producer
+                            {data.role}
                         </div>
                         <div className={classes.artist_bio}>
-                            Pincool has been making music for around 6 years now . Started his career with a remix album of Assamese songs which went viral back then , later on started making originals with some prominent names in the industry. Some of his most streamed tracks are 'Jyotikona' , 'Mone bisare' , 'Mone bisare 2.0' .
+                            {data.bio}
                         </div>
                         <div className={classes.social_media_links_container}>
                             <div className={classes.left}>
@@ -80,8 +84,8 @@ export default function ArtistProfile() {
                                 <i className="fab fa-twitter"></i>
                             </div>
                             <div className={classes.right}>
-                                <i class="fab fa-spotify"></i>
-                                <i class="fab fa-youtube"></i>
+                                <i className="fab fa-spotify"></i>
+                                <i className="fab fa-youtube"></i>
                             </div>
                         </div>
                     </div>

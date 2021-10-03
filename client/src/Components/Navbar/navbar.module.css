@@ -1,6 +1,6 @@
 .navbar{
     width: 100vw;
-    background: transparent;
+    background: var(--navblack);
     display: flex;
     align-items: center;
     padding: 13px 18px;

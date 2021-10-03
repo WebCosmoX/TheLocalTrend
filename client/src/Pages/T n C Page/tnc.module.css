@@ -16,6 +16,7 @@
     font-family: var(--raleway);
     padding: 0 20px 7px 0;
     border-bottom: 2px solid var(--yellow);
+    font-size: 18px;
 }
 
 .start{
