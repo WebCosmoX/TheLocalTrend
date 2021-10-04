@@ -28,5 +28,6 @@
 }
 
 .link:hover{
+    color: var(--black);
     text-decoration: underline;
 }

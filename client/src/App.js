@@ -15,6 +15,7 @@ import CreateArtist from "./Components/Admin/CreateArtist";
 import UploadServiceImage from "./Components/Admin/UploadServiceImage";
 import UploadArtistImage from "./Components/Admin/UploadArtistImage";
 import AboutUs from "./Pages/About Us Page/AboutUs";
+import TnC from "./Pages/T n C Page/TnC";
 import AddSong from "./Components/Admin/AddSong";
 
 function App() {
@@ -23,9 +24,10 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/artist" exact component={ArtistProfile} />
+          <Route path="/artist/details/:id" exact component={ArtistProfile} />
           <Route path="/artist/all" exact component={AllArtists} />
           <Route path="/about" exact component={AboutUs} />
+          <Route path="/tnc" exact component={TnC} />
           <Route path="/admin/signin" exact component={Signin} />
           <AdminRoute path="/admin" exact component={Landing} />
           <AdminRoute path="/admin/services" exact component={Services} />

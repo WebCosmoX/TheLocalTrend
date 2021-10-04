@@ -90,6 +90,7 @@
     font-weight: 800;
     font-family: var(--mulish);
     cursor: pointer;
+    color: var(--black);
 }
 
 .copyright{
@@ -114,6 +115,14 @@
         justify-content: space-between;
         align-items: flex-start;
         width: 80%;
+    }
+
+    .read{
+        align-items: center;
+    }
+
+    .footer_link_container{
+        align-items: center;
     }
 
     .content_container{
