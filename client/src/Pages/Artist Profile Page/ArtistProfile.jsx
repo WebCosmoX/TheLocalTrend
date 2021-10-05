@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './artistprofile.module.css';
 import Navbar from '../../Components/Navbar/Navbar';
-import ArtistAndroid from '../../Assets/Artist-Android.png';
 import Track from '../../Components/Track/Track';
 import Footer from '../../Components/Footer/Footer';
 import FreemodeSlider from '../../Components/Sliders/Freemode Slider/FreemodeSlider';
@@ -57,7 +56,7 @@ export default function ArtistProfile() {
                 }
                 {
                     isMobile &&
-                    <img src={imageURL} alt="Artist Name" className={classes.artist_image_mobile}></img>
+                    <img src={imageURL} alt={data.name} className={classes.artist_image_mobile}></img>
                 }
                 {
                     //Artist details section
@@ -65,7 +64,7 @@ export default function ArtistProfile() {
                 <section className={classes.artist_details_section}>
                     {
                         isDesktop &&
-                        <img src={imageURL} alt="Artist Name" className={classes.artist_image_desktop}></img>
+                        <img src={imageURL} alt={data.name} className={classes.artist_image_desktop}></img>
                     }
                     <div className={classes.desktopWrapper}>
                         <div className={classes.artist_name}>

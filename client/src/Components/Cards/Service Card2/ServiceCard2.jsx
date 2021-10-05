@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './servicecard2.module.css';
-import ServiceImage from '../../../Assets/Service Image.png';
 
 export default function ServiceCard2({ header, body, image }) {
     return (

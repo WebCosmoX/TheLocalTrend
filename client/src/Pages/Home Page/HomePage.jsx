@@ -96,7 +96,7 @@ export default function HomePage() {
                         the <br /> local <span> trend </span>
                     </div>
                     <div className={classes.sub_header}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor diam ut purus elementum ullamcorper
+                        The Abode of Entertainment
                     </div>
                 </div>
                 <SocialMobile />

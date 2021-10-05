@@ -40,9 +40,17 @@ export default function Footer() {
             <div className={classes.line}></div>
 
             <div className={classes.bottom}>
-                <h4 className={classes.powered}>
-                    Powered by webcosmo_x
-                </h4>
+                <Link
+                    to={{
+                        pathname: "https://www.instagram.com/webcosmo_x/"
+                    }}
+                    target="_blank"
+                    className={classes.powered}
+                >
+                    <h4>
+                        Powered by webcosmo_x
+                    </h4>
+                </Link>
 
                 <h5 className={classes.copyright}>
                     Copyright 2021 @TheLocalTrend

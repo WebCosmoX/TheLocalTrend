@@ -45,7 +45,7 @@
     color: #fff;
     margin-top: 20px;
     font-family: var(--mulish);
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
 }
 
@@ -141,61 +141,52 @@
     font-weight: 600;
 }
 
-@keyframes first{
-    0%{
+@keyframes first {
+    0% {
         opacity: 0;
     }
-
-    25%{
+    25% {
         opacity: 1;
         background: var(--yellow);
     }
-
-    50%{
+    50% {
         opacity: 1;
         background: var(--yellow);
     }
-
-    100%{
-        opacity: 1;
-        background: var(--yellow);
-    }
-}
-
-@keyframes second{
-    0%{
-        opacity: 0;
-    }
-
-    25%{
-        opacity: 0;
-    }
-
-    50%{
-        opacity: 1;
-        background: var(--yellow);
-    }
-
-    100%{
+    100% {
         opacity: 1;
         background: var(--yellow);
     }
 }
 
-@keyframes third{
-    0%{
+@keyframes second {
+    0% {
         opacity: 0;
     }
-
-    25%{
+    25% {
         opacity: 0;
     }
+    50% {
+        opacity: 1;
+        background: var(--yellow);
+    }
+    100% {
+        opacity: 1;
+        background: var(--yellow);
+    }
+}
 
-    50%{
+@keyframes third {
+    0% {
         opacity: 0;
     }
-
-    100%{
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
         background: var(--yellow);
     }
@@ -211,15 +202,15 @@
     font-weight: 600;
 }
 
-.first_circle{
+.first_circle {
     animation: first 1.3s infinite linear;
 }
 
-.second_circle{
+.second_circle {
     animation: second 1.3s infinite linear;
 }
 
-.third_circle{
+.third_circle {
     animation: third 1.3s infinite linear;
 }
 
@@ -238,6 +229,62 @@
 @media screen and (min-width: 360px) and (min-height: 750px) {
     .top_section {
         height: 80vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .top_section {
+        height: 60vh;
+    }
+    .hero_image_desktop {
+        display: none;
+    }
+    .hero_image_desktop {
+        display: block;
+    }
+    .details {
+        width: 65%;
+    }
+    .details .header {
+        margin-top: 130px;
+    }
+    .sub_header {
+        font-size: 18px;
+    }
+    .latest_releases_section {
+        padding-top: 50px;
+    }
+    .section_header {
+        font-size: 16px;
+    }
+    .whats_new_section {
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .top_section {
+        height: 50vh;
+    }
+    .hero_image_desktop {
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .details {
+        margin-top: 80px;
+        margin-left: 60px;
+        padding: 0 85px;
+        padding-bottom: 20px;
+        border-left: 4px solid var(--yellow);
+        height: max-content;
+        width: 70%;
+    }
+
+    .sub_header{
+        font-size: 20px;
     }
 }
 
@@ -265,7 +312,6 @@
         border-left: 4px solid var(--yellow);
         height: max-content;
         width: 55%;
-        /* border: 3px solid yellow; */
     }
     .details .header {
         margin-top: 50px;
@@ -273,7 +319,7 @@
         font-weight: 600;
     }
     .sub_header {
-        font-size: 16px;
+        font-size: 20px;
         margin-top: 30px;
     }
     /* Latest Releases Section */

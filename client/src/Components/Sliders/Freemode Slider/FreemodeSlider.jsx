@@ -7,9 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "./freemodeslider.css";
 
-// import Swiper core and required modules
-import SwiperCore from 'swiper/core';
-
 import SliderImage from '../../../Assets/slider-image.png';
 
 
