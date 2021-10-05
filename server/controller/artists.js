@@ -15,6 +15,7 @@ const s3 = new aws.S3({
 exports.create_artist = async (req, res) => {
     try {
         const { name, bio, role, spotify_url, youtube_url } = req.body;
+        console.log(req.body);
         // const artist = new Artist({
         // name, bio, role, spotify_url, youtube_url, fb_url, insta_url, twitter_url
         // });
@@ -58,7 +59,8 @@ exports.update_artist = async (req, res) => {
         } = req.body;
 
         const artist = await Artist.findByIdAndUpdate(id, {
-            $set: { name, bio, role }
+            // $set: { name, bio, role, spotify_url, youtube_url, fb_url, insta_url, twitter_url }
+            $set: req.body
         }, { new: true });
 
         // console.log({ artist });

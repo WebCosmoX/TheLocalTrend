@@ -24,6 +24,7 @@ const Artists = () => {
     const deleteArtist = async (e, id) => {
         e.stopPropagation();
         try {
+            alert('Are you sure to delete this item?');
             await ArtistFinder.delete(`/${id}`);
             setArtists(
                 artists.filter(artist => artist._id !== id)

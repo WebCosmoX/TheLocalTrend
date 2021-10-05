@@ -29,11 +29,14 @@ const Services = () => {
 
     const deleteService = async (e, id) => {
         e.stopPropagation();
+        // alert();
         try {
+            // if (confirm('Are you sure to delete this item?')) {
             await ServiceFinder.delete(`/${id}`);
             setServices(
                 services.filter(service => service._id !== id)
             );
+            // }
         } catch (err) {
             console.error(err);
         }
