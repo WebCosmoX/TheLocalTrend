@@ -207,8 +207,7 @@ exports.get_recent_songs = async (req, res) => {
             {
                 $gte: new Date((new Date().getTime() - (30 * 24 * 60 * 60 * 1000)))
             }
-        }).populate('artist', 'name')
-            .sort({ createdAt: -1 }).limit(10);
+        }).populate('artist').sort({ createdAt: -1 }).limit(10);
         console.log({ songs });
         return res.status(200).json({ songs });
     } catch (err) {
