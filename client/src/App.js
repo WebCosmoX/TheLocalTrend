@@ -1,7 +1,5 @@
 import HomePage from "./Pages/Home Page/HomePage";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Footer from "./Components/Footer/Footer";
-// import SlickSlider from "./Components/Sliders/Slick Slider/SlickSlider";
 import { NotFound } from './NotFound/NotFound';
 import Signin from "./Components/Admin/Signin";
 import Landing from "./Components/Admin/Landing";
@@ -16,6 +14,9 @@ import CreateService from "./Components/Admin/CreateService";
 import CreateArtist from "./Components/Admin/CreateArtist";
 import UploadServiceImage from "./Components/Admin/UploadServiceImage";
 import UploadArtistImage from "./Components/Admin/UploadArtistImage";
+import AboutUs from "./Pages/About Us Page/AboutUs";
+import TnC from "./Pages/T n C Page/TnC";
+import AddSong from "./Components/Admin/AddSong";
 
 function App() {
   return (
@@ -23,9 +24,10 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/artist" exact component={ArtistProfile} />
+          <Route path="/artist/details/:id" exact component={ArtistProfile} />
           <Route path="/artist/all" exact component={AllArtists} />
-          {/* <Route path="/slider" exact component={SlickSlider} /> */}
+          <Route path="/about" exact component={AboutUs} />
+          <Route path="/tnc" exact component={TnC} />
           <Route path="/admin/signin" exact component={Signin} />
           <AdminRoute path="/admin" exact component={Landing} />
           <AdminRoute path="/admin/services" exact component={Services} />
@@ -35,6 +37,7 @@ function App() {
           <AdminRoute exact path='/admin/services/:id/update' component={UpdateService} />
           <AdminRoute exact path='/admin/services/:id/upload-image' component={UploadServiceImage} />
           <AdminRoute exact path='/admin/artists/:id/upload-image' component={UploadArtistImage} />
+          <AdminRoute exact path='/admin/artists/:id/add-song' component={AddSong} />
           <AdminRoute exact path='/admin/artists/:id/update' component={UpdateArtist} />
           <Route component={NotFound} />
         </Switch>

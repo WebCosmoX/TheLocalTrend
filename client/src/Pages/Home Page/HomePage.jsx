@@ -7,24 +7,24 @@ import SocialMobile from '../../Components/Social Media Pack/Mobile/SocialMobile
 import AutoplaySlider from '../../Components/Sliders/Autoplay Slider/AutoplaySlider';
 import ServiceCard from '../../Components/Cards/Service Card/ServiceCard';
 import ArtistCard from '../../Components/Cards/Artist Card/ArtistCard';
-import JB from '../../Assets/JB.png';
-import Drake from '../../Assets/Drake.png';
-import Arijit from '../../Assets/Arijit Singh.png';
 import SocialDesktop from '../../Components/Social Media Pack/Desktop/SocialDesktop';
 import EventLink from '../../Components/Links/EventLink';
 import Footer from '../../Components/Footer/Footer';
 import MerchSlider from '../../Components/Sliders/Merch Slider/MerchSlider';
 import lottie from 'lottie-web';
 import ViewAllButton from '../../Components/Buttons/ViewAll Buttons/ViewAllButton';
+import baseurl from '../../api.config.js';
 
 export default function HomePage() {
 
-    console.log({ env: process.env });
-
     const animeContainer = React.useRef(null);
+    const [artists, setArtists] = React.useState([]);
+    const [services, setServices] = React.useState([]);
 
     React.useEffect(() => {
         scrollToTop();
+        fetchServices();
+        fetchArtistDetails();
 
         lottie.loadAnimation({
             container: animeContainer.current,
@@ -38,6 +38,48 @@ export default function HomePage() {
     //function to scroll the page to top
     function scrollToTop() {
         window.scrollTo(0, 0);
+    }
+
+    //function to fetch services for "Our Services" section
+    function fetchServices() {
+        try {
+            baseurl.get('services')
+                .then(data => {
+                    for (let i = 0; i < 3; i++) {
+                        setServices(prev => [
+                            ...prev,
+                            data.data.services[i]
+                        ])
+                    }
+                })
+        } catch {
+
+        }
+    }
+
+    //function to fetch artist details for "Our Artists" section
+    function fetchArtistDetails() {
+        try {
+            baseurl.get('artists')
+                .then(data => {
+
+                    //randomize artist selection
+                    let set = new Set();
+                    while (set.size < 6) {
+                        let random = Math.floor(Math.random() * data.data.artists.length);
+                        set.add(random);
+                    }
+
+                    set.forEach(elem => {
+                        setArtists(prev => [
+                            ...prev,
+                            data.data.artists[elem]
+                        ])
+                    })
+                })
+        } catch {
+
+        }
     }
 
     return (
@@ -54,7 +96,7 @@ export default function HomePage() {
                         the <br /> local <span> trend </span>
                     </div>
                     <div className={classes.sub_header}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor diam ut purus elementum ullamcorper
+                        The Abode of Entertainment
                     </div>
                 </div>
                 <SocialMobile />
@@ -78,19 +120,20 @@ export default function HomePage() {
                 <div className={classes.section_header}>
                     our services
                 </div>
-                <ServiceCard
-                    header="Video Production"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu magna sem. "
+                {services.map(item => {
+                    let imageURL = `https://www.thelocaltrendent.com/api/services/images/${item.image}`;
+                    return <ServiceCard
+                        key={item._id}
+                        image={imageURL}
+                        header={item.title}
+                        description={item.description}
+                    />
+                })}
+                <ViewAllButton
+                    text="View All Services"
+                    top="40px"
+                    link="/about"
                 />
-                <ServiceCard
-                    header="Artist Management"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu magna sem. "
-                />
-                <ServiceCard
-                    header="Music Distribution"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu magna sem. "
-                />
-                <ViewAllButton text="View All Services" top="40px" />
             </section>
 
             {
@@ -101,34 +144,18 @@ export default function HomePage() {
                     our artists
                 </div>
                 <div className={classes.cards_container}>
-                    <ArtistCard
-                        artistImage={JB}
-                        artistName="justin bieber"
-                    />
-                    <ArtistCard
-                        artistImage={Drake}
-                        artistName="drake"
-                    />
-                    <ArtistCard
-                        artistImage={Arijit}
-                        artistName="arijit singh"
-                    />
-                    <ArtistCard
-                        artistImage={JB}
-                        artistName="justin bieber"
-                    />
-                    <ArtistCard
-                        artistImage={Drake}
-                        artistName="drake"
-                    />
-                    <ArtistCard
-                        artistImage={Arijit}
-                        artistName="arijit singh"
-                    />
+                    {artists.map(item => {
+                        return <ArtistCard
+                            key={item._id}
+                            id={item._id}
+                            data={item}
+                        />
+                    })}
                 </div>
                 <ViewAllButton
                     text="View All Artists"
                     top="50px"
+                    link="/artist/all"
                 />
             </section>
 

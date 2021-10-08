@@ -1,18 +1,19 @@
 import React from 'react';
 import classes from './socialdesktop.module.css';
+import { Link } from 'react-router-dom';
 
 export default function SocialDesktop() {
     return (
         <div className={classes.container}>
-            <a href="#">
+            <Link to="#">
                 <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
                 <i className="fab fa-facebook-square"></i>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="#">
                 <i className="fab fa-twitter"></i>
-            </a>
+            </Link>
         </div>
     )
 }

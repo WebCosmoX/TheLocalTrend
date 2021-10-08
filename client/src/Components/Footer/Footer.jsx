@@ -6,31 +6,31 @@ export default function Footer() {
     return (
         <div className={classes.container}>
             <div className={classes.top}>
-                <div className={classes.content_container}>
-                    <div className={classes.header}>Read :</div>
+                <div className={`${classes.content_container} ${classes.read}`}>
+                    <div className={classes.header}>Read</div>
                     <div className={classes.footer_link_container}>
                         <Link to="/" className={classes.footer_link}>
                             Privacy Policy
                         </Link>
-                        <Link to="/" className={classes.footer_link}>
+                        <Link to="/tnc" className={classes.footer_link}>
                             Terms and Conditions
                         </Link>
-                        <Link to="/" className={classes.footer_link}>
+                        <Link to="/about" className={classes.footer_link}>
                             About Us
                         </Link>
                     </div>
                 </div>
 
-                <div className={classes.content_container}>
-                    <div className={classes.header}>Contact Us :</div>
+                <div className={`${classes.content_container} ${classes.contact_us}`}>
+                    <div className={classes.header}>Contact Us</div>
                     <p className={classes.content}>
                         thelocaltrend4you@gmail.com<br />
                         8638154432, 6284221089
                     </p>
                 </div>
 
-                <div className={classes.content_container}>
-                    <div className={classes.header}>Working Office Address :</div>
+                <div className={`${classes.content_container} ${classes.office_address}`}>
+                    <div className={classes.header}>Working Office Address</div>
                     <p className={classes.content}>
                         Kailash Bhawan, Basisthapur bylane no - 2 , Opp. Rambha Madhav Vivah Bhawan , Hatigaon, Guwahati, Assam , 781038.
                     </p>
@@ -40,9 +40,17 @@ export default function Footer() {
             <div className={classes.line}></div>
 
             <div className={classes.bottom}>
-                <h4 className={classes.powered}>
-                    Powered by webcosmo_x
-                </h4>
+                <Link
+                    to={{
+                        pathname: "https://www.instagram.com/webcosmo_x/"
+                    }}
+                    target="_blank"
+                    className={classes.powered}
+                >
+                    <h4>
+                        Powered by webcosmo_x
+                    </h4>
+                </Link>
 
                 <h5 className={classes.copyright}>
                     Copyright 2021 @TheLocalTrend

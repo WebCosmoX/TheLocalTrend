@@ -5,7 +5,7 @@
 
 /* Media Queries */
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 900px) {
     .container{
         display: flex;
         flex-direction: column;
@@ -13,7 +13,7 @@
         position: absolute;
         background: transparent;
         left: 52px;
-        bottom: 60px;
+        bottom: 100px;
     }
 
     .container a{
@@ -26,6 +26,7 @@
     }
 
     .container a i:hover{
+        text-decoration: none;
         color: var(--yellow);
     }
 }

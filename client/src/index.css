@@ -11,10 +11,12 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    background: var(--black);
+    background: var(--bgblack);
 }
 
 :root {
+    --bgblack: #171717;
+    --navblack: #090909;
     --black: #000000;
     --white: #ffffff;
     --yellow: #f5d40d;

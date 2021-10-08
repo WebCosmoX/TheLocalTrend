@@ -4,13 +4,17 @@
     border: none;
     border-radius: 10px;
     font-family: var(--mulish);
-    font-size: 14px;
+    font-size: 15px;
     border: 2px solid rgba(245, 212, 13, 1);
     color: rgba(245, 212, 13, 1);
     cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
 }
 
 .button:hover{
     border: none;
-    box-shadow: 0 0 3px 3px rgba(245, 212, 13, 1);
+    background: var(--yellow);
+    color: var(--black);
+    border: 2px solid rgba(245, 212, 13, 1);
 }

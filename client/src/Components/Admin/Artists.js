@@ -24,6 +24,7 @@ const Artists = () => {
     const deleteArtist = async (e, id) => {
         e.stopPropagation();
         try {
+            alert('Are you sure to delete this item?');
             await ArtistFinder.delete(`/${id}`);
             setArtists(
                 artists.filter(artist => artist._id !== id)
@@ -42,48 +43,50 @@ const Artists = () => {
                 <h2>Artists</h2>
                 <Link className="btn btn-warning mt-2 mb-2" to='/admin/artists/add-artist'>Add a new artist</Link>
 
-                <table class="table table-hover table-dark table-striped">
-                    <thead>
-                        <tr className='bg-primary'>
-                            <th scope='col'>Name</th>
-                            <th scope='col'>Bio</th>
-                            <th scope='col'>Role</th>
-                            <th scope='col'>Image</th>
-                            <th scope='col'>Edit</th>
-                            <th scope='col'>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div className="table-responsive-sm table-responsive-md table-responsive-lg">
 
-                        {artists?.length > 0 && artists.map(artist => (
-                            <tr>
-                                <td>{artist.name}</td>
-                                <td>{artist.bio}</td>
-                                <td>{artist.role}</td>
-                                <td>
-                                    {
-                                        artist.profile_image && <a target='_blank' href={`https://www.thelocaltrendent.com/api/artists/images/${artist.profile_image}`}>See Image</a>
-                                    }
-
-                                </td>
-                                <td>
-                                    <button
-                                        className="btn btn-dark"
-                                        onClick={e => updateArtist(e, artist._id)}
-                                    >Edit</button>
-                                </td>
-                                <td>
-                                    <button
-                                        className="btn btn-danger"
-                                        onClick={e => deleteArtist(e, artist._id)}
-                                    >Delete</button>
-                                </td>
+                    <table class="table table-hover table-dark table-striped">
+                        <thead>
+                            <tr className='bg-primary'>
+                                <th scope='col'>Name</th>
+                                <th scope='col'>Bio</th>
+                                <th scope='col'>Role</th>
+                                <th scope='col'>Image</th>
+                                <th scope='col'>Edit</th>
+                                <th scope='col'>Delete</th>
                             </tr>
-                        ))}
+                        </thead>
+                        <tbody>
 
-                    </tbody>
-                </table>
+                            {artists?.length > 0 && artists.map(artist => (
+                                <tr>
+                                    <td>{artist.name}</td>
+                                    <td>{artist.bio}</td>
+                                    <td>{artist.role}</td>
+                                    <td>
+                                        {
+                                            artist.profile_image && <a target='_blank' href={`https://www.thelocaltrendent.com/api/artists/images/${artist.profile_image}`}>See Image</a>
+                                        }
 
+                                    </td>
+                                    <td>
+                                        <button
+                                            className="btn btn-dark"
+                                            onClick={e => updateArtist(e, artist._id)}
+                                        >Edit</button>
+                                    </td>
+                                    <td>
+                                        <button
+                                            className="btn btn-danger"
+                                            onClick={e => deleteArtist(e, artist._id)}
+                                        >Delete</button>
+                                    </td>
+                                </tr>
+                            ))}
+
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
 
