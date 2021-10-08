@@ -48,12 +48,13 @@ export default function Footer() {
                     className={classes.powered}
                 >
                     <h4>
+                        <span><i className="fas fa-plug"></i></span>
                         Powered by webcosmo_x
                     </h4>
                 </Link>
 
                 <h5 className={classes.copyright}>
-                    Copyright 2021 @TheLocalTrend
+                    Copyright 2021 @TLT Group
                 </h5>
             </div>
         </div>

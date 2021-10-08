@@ -29,7 +29,7 @@ export default function MerchSlider() {
                     },
 
                     "1300": {
-                        "slidesPerView": 4.5,
+                        "slidesPerView": 4.2,
                         "spaceBetween": 20,
                     }
                 }}
