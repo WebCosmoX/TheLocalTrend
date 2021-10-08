@@ -4,7 +4,7 @@ import classes from './servicecard.module.css';
 export default function ServiceCard({ image, header, description }) {
     return (
         <div className={classes.container}>
-            <img src={image} alt="Service"></img>
+            <img src={image} alt={header}></img>
             <div className={classes.card_details}>
                 <h4 className={classes.card_header}>
                     {header}

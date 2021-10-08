@@ -21,12 +21,13 @@
 }
 
 .link:hover {
+    text-decoration: none;
     color: var(--yellow);
 }
 
 /* Media queries */
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 900px) {
 
     .container i{
         font-size: 20px;

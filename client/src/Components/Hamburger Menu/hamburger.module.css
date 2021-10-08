@@ -86,7 +86,13 @@
 
 /* Media Queries */
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 768px) {
+    .btn{
+        right: 30px;
+    }
+}
+
+@media screen and (min-width: 900px) {
     .btn{
         display: none;
     }

@@ -85,12 +85,21 @@
 }
 
 .powered{
+    text-decoration: none;
+}
+
+.powered h4{
     font-size: 17px;
     margin-top: 16px;
     font-weight: 800;
     font-family: var(--mulish);
     cursor: pointer;
     color: var(--black);
+}
+
+.powered h4:hover{
+    text-decoration: none;
+    color: var(--darkblue);
 }
 
 .copyright{
@@ -102,6 +111,16 @@
 
 
 /* Media Queries */
+
+@media screen and (min-width: 768px) {
+    .read{
+        align-items: center;
+    }
+
+    .footer_link_container{
+        align-items: center;
+    }
+}
 
 @media screen and (min-width: 1150px) {
     .container{

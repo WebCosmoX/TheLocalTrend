@@ -1,11 +1,7 @@
 import React from "react";
-import AlbumArt1 from '../../../Assets/Album Art-Android.png';
-import AlbumArt2 from '../../../Assets/Album Art2-Android.png';
-import AlbumArt3 from '../../../Assets/Album Art3-Android.png';
 import AlbumBackdrop1 from '../../../Assets/Album Backdrop1.png';
 import AlbumBackdrop2 from '../../../Assets/Album Backdrop2.png';
 import AlbumBackdrop3 from '../../../Assets/Album Backdrop3.png';
-import RepBackdrop from '../../../Assets/RepBackdrop.png';
 import Spotify from '../../../Assets/Spotify.png';
 import YouTube from '../../../Assets/YouTube.png';
 

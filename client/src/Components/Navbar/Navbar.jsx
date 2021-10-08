@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './navbar.module.css';
 import LogoMobile from '../../Assets/Logo-Mobile.png';
-import LogoDesktop from '../../Assets/Logo-Desktop.png';
 import Hamburger from '../Hamburger Menu/Hamburger';
 import { Link } from 'react-router-dom';
 

@@ -8,10 +8,6 @@ import "swiper/swiper.min.css";
 import "swiper/components/scrollbar/scrollbar.min.css";
 import "./merchslider.css";
 
-// import Swiper core and required modules
-import SwiperCore from 'swiper/core';
-
-import SliderImage from '../../../Assets/slider-image.png';
 import MerchSlideImage from '../../../Assets/MerchSlideImage.png';
 
 export default function MerchSlider() {
@@ -22,7 +18,17 @@ export default function MerchSlider() {
                 spaceBetween={20}
                 freeMode={true}
                 breakpoints={{
-                    "1150": {
+                    "768": {
+                        "slidesPerView": 2.5,
+                        "spaceBetween": 20,
+                    },
+
+                    "900": {
+                        "slidesPerView": 3.5,
+                        "spaceBetween": 20,
+                    },
+
+                    "1300": {
                         "slidesPerView": 4.5,
                         "spaceBetween": 20,
                     }

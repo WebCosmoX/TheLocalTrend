@@ -118,8 +118,33 @@
 
 /* Media Queries */
 
+@media screen and (min-width: 768px) {
+    .latest_releases_slide{
+        height: 30vh;
+    }
+
+    .song_details{
+        margin: 15% 26px 0 26px;
+    }
+
+    .song_name{
+        font-size: 22px;
+    }
+
+    .stream_now_links{
+        font-size: 15px;
+        margin-left: 26px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .latest_releases_slide{
+        height: 25vh;
+    }
+}
+
 @media screen and (min-width: 1150px) {
-    .swiper-slide{
+    .latest_releases_slide{
         height: 60vh;
     }
 
