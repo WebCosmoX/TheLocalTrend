@@ -4,6 +4,7 @@ import AlbumBackdrop2 from '../../../Assets/Album Backdrop2.png';
 import AlbumBackdrop3 from '../../../Assets/Album Backdrop3.png';
 import Spotify from '../../../Assets/Spotify.png';
 import YouTube from '../../../Assets/YouTube.png';
+import { Link } from 'react-router-dom';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -49,12 +50,16 @@ export default function AutoplaySlider() {
                         </div>
                         <div className="stream_now_links">
                             Stream now:
-                            <span>
-                                <img src={Spotify} alt="Spotify Link"></img>
-                            </span>
-                            <span>
-                                <img src={YouTube} alt="YouTube Link"></img>
-                            </span>
+                            <Link to="/">
+                                <span>
+                                    <img src={Spotify} alt="Spotify Link"></img>
+                                </span>
+                            </Link>
+                            <Link to="/">
+                                <span>
+                                    <img src={YouTube} alt="Spotify Link"></img>
+                                </span>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>

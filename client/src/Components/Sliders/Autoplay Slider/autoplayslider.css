@@ -118,6 +118,12 @@
 
 /* Media Queries */
 
+@media screen and (min-width: 520px) {
+    .latest_releases_slide{
+        height: 40vh;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .latest_releases_slide{
         height: 30vh;
@@ -173,5 +179,11 @@
 
     .overlay{
         background: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media screen and (min-height: 850px) {
+    .latest_releases_slide{
+        height: 50vh;
     }
 }

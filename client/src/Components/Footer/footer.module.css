@@ -102,6 +102,12 @@
     color: var(--darkblue);
 }
 
+.powered h4 span{
+    display: inline-block;
+    margin-right: 7px;
+    font-size: 18px;
+}
+
 .copyright{
     margin-top: 20px;
     font-weight: 800;

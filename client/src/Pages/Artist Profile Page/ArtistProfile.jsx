@@ -92,13 +92,13 @@ export default function ArtistProfile() {
 
                 {
                     //New Releases Section
+                    // <section className={classes.new_releases_section}>
+                    //     <div className={classes.section_header}>
+                    //         new releases
+                    //     </div>
+                    //     <FreemodeSlider />
+                    // </section>
                 }
-                <section className={classes.new_releases_section}>
-                    <div className={classes.section_header}>
-                        new releases
-                    </div>
-                    <FreemodeSlider />
-                </section>
 
                 {
                     //Popular Tracks Section
