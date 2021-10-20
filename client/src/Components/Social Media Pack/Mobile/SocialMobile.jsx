@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './socialmobile.module.css';
+import { Link } from 'react-router-dom';
 
 export default function SocialMobile() {
 
@@ -23,7 +24,11 @@ export default function SocialMobile() {
                     {openLinks && <i className="fas fa-times"></i>}
                     {!openLinks && <i className="fas fa-heart"></i>}
                 </button>
-                <div
+                <Link
+                    to={{
+                        pathname: "https://www.facebook.com/theLtrnd/"
+                    }}
+                    target="_blank"
                     className={`${classes.circle} ${classes.fb} ${classes.social_links}`}
                     style={{
                         top: openLinks ? "100%" : "100%",
@@ -37,8 +42,12 @@ export default function SocialMobile() {
                             fontSize: openLinks ? "23px" : "0",
                         }}
                     ></i>
-                </div>
-                <div
+                </Link>
+                <Link
+                    to={{
+                        pathname: "https://twitter.com/thelocaltrend?s=20"
+                    }}
+                    target="_blank"
                     className={`${classes.circle} ${classes.twitter} ${classes.social_links}`}
                     style={{
                         top: openLinks ? "0" : "100%",
@@ -52,8 +61,12 @@ export default function SocialMobile() {
                             fontSize: openLinks ? "23px" : "0",
                         }}
                     ></i>
-                </div>
-                <div
+                </Link>
+                <Link
+                    to={{
+                        pathname: "https://www.instagram.com/the_localtrend/"
+                    }}
+                    target="_blank"
                     className={`${classes.circle} ${classes.insta} ${classes.social_links}`}
                     style={{
                         top: openLinks ? "0" : "100%",
@@ -67,7 +80,7 @@ export default function SocialMobile() {
                             fontSize: openLinks ? "23px" : "0",
                         }}
                     ></i>
-                </div>
+                </Link>
             </div>
         </div>
     )
