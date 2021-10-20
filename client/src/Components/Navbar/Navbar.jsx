@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './navbar.module.css';
 import LogoMobile from '../../Assets/Logo-Mobile.png';
+import Logo from '../../Assets/Logo.png';
 import Hamburger from '../Hamburger Menu/Hamburger';
 import { Link } from 'react-router-dom';
 
@@ -25,8 +26,7 @@ export default function Navbar() {
                 background: navScrolled ? 'var(--navblack)' : 'transparent',
             }}
         >
-            <img src={LogoMobile} alt="Logo Mobile" className={classes.logo_mobile}></img>
-            <img src={LogoMobile} alt="Logo Mobile" className={classes.logo_desktop}></img>
+            <img src={Logo} alt="The Local Trend" className={classes.logo}></img>
             {
                 //hamburger menu for mobile devices
             }
