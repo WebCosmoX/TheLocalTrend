@@ -13,8 +13,10 @@
     background: var(--navblack);
 }
 
-.logo_desktop{
-    display: none;
+.logo{
+    width: 45px;
+    height: 45px;
+    display: block;
 }
 
 .nav_links{
@@ -39,14 +41,6 @@
         padding: 20px 35px;
         position: fixed;
         top: 0;
-    }
-
-    .logo_mobile{
-        display: none;
-    }
-
-    .logo_desktop{
-        display: block;
     }
 
     .nav_links{

@@ -3,7 +3,6 @@ import classes from './artistprofile.module.css';
 import Navbar from '../../Components/Navbar/Navbar';
 import Track from '../../Components/Track/Track';
 import Footer from '../../Components/Footer/Footer';
-import FreemodeSlider from '../../Components/Sliders/Freemode Slider/FreemodeSlider';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import { useLocation } from 'react-router-dom';
 
@@ -89,16 +88,6 @@ export default function ArtistProfile() {
                         </div>
                     </div>
                 </section>
-
-                {
-                    //New Releases Section
-                    // <section className={classes.new_releases_section}>
-                    //     <div className={classes.section_header}>
-                    //         new releases
-                    //     </div>
-                    //     <FreemodeSlider />
-                    // </section>
-                }
 
                 {
                     //Popular Tracks Section
