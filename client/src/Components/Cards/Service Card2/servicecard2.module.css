@@ -28,16 +28,16 @@
 }
 
 .header {
-    font-family: var(--opensans);
+    font-family: var(--raleway);
     text-transform: capitalize;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--yellow);
 }
 
 .body {
     margin-top: 3px;
     font-size: 14px;
-    color: var(--greyscript);
+    color: var(--white);
     text-align: center;
 }
 
@@ -45,7 +45,7 @@
 
 @media screen and (min-width: 1150px) {
     .container {
-        width: 60%;
+        width: 70%;
         margin-top: 50px;
         display: flex;
         flex-direction: row;
@@ -61,10 +61,10 @@
         align-items: flex-start;
     }
     .header {
-        font-size: 21px;
+        font-size: 25px;
     }
     .body {
-        font-size: 15px;
+        font-size: 16px;
         text-align: left;
     }
 }

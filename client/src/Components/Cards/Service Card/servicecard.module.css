@@ -21,7 +21,8 @@
 }
 
 .card_header{
-    font-family: var(--opensans);
+    font-family: var(--raleway);
+    font-size: 17px;
     text-transform: capitalize;
     font-weight: 600;
 }
@@ -50,6 +51,7 @@
         align-items: flex-start;
         border-left: 4px solid var(--yellow);
         padding: 10px 0 10px 20px;
+        width: 50%;
     }
 
     .container img{
@@ -58,7 +60,8 @@
     }
 
     .card_header{
-        font-size: 20px;
+        font-size: 23px;
+        font-family: var(--raleway);
     }
 
     .card_description{
@@ -69,6 +72,6 @@
 
 @media screen and (min-width: 1350px) {
     .container{
-        width: 45%;
+        width: 55%;
     }
 }
