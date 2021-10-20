@@ -32,6 +32,15 @@
     border: none;
     cursor: pointer;
     outline: none;
+    text-decoration: none;
+}
+
+.circle:hover{
+    text-decoration: none;
+}
+
+.circle:visited{
+    color: var(--black);
 }
 
 .menu_btn{
