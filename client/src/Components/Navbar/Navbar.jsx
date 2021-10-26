@@ -11,7 +11,7 @@ export default function Navbar() {
     window.addEventListener('scroll', handleNavStyle);
 
     function handleNavStyle() {
-        if (window.scrollY >= 100) {
+        if (window.scrollY >= 70) {
             setNavScrolled(true);
         } else {
             setNavScrolled(false);
