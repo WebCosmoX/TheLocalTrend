@@ -5,6 +5,7 @@ import Track from '../../Components/Track/Track';
 import Footer from '../../Components/Footer/Footer';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function ArtistProfile() {
 
@@ -19,7 +20,7 @@ export default function ArtistProfile() {
         window.addEventListener("resize", setWidth(window.innerWidth));
         checkWindowSize();
         scrollToTop();
-        console.log(data.bio);
+        console.log(data);
 
         return () => {
             window.removeEventListener("resize", setWidth(window.innerWidth));
@@ -77,13 +78,58 @@ export default function ArtistProfile() {
                         </div>
                         <div className={classes.social_media_links_container}>
                             <div className={classes.left}>
-                                <i className="fab fa-facebook-square"></i>
-                                <i className="fab fa-instagram"></i>
-                                <i className="fab fa-twitter"></i>
+                                {!(data.fb_url === undefined) &&
+                                    <Link
+                                        to={{
+                                            pathname: data.fb_url
+                                        }}
+                                        target="_blank"
+                                    >
+                                        <i className="fab fa-facebook"></i>
+                                    </Link>
+                                }
+                                {!(data.insta_url === undefined) &&
+                                    <Link
+                                        to={{
+                                            pathname: data.insta_url
+                                        }}
+                                        target="_blank"
+                                    >
+                                        <i className="fab fa-instagram"></i>
+                                    </Link>
+                                }
+                                {!(data.twitter_url === undefined) &&
+                                    <Link
+                                        to={{
+                                            pathname: data.twitter_url
+                                        }}
+                                        target="_blank"
+                                    >
+                                        <i className="fab fa-twitter"></i>
+                                    </Link>
+                                }
                             </div>
                             <div className={classes.right}>
-                                <i className="fab fa-spotify"></i>
-                                <i className="fab fa-youtube"></i>
+                                {!(data.spotify_url === undefined) &&
+                                    <Link
+                                        to={{
+                                            pathname: data.spotify_url
+                                        }}
+                                        target="_blank"
+                                    >
+                                        <i className="fab fa-spotify"></i>
+                                    </Link>
+                                }
+                                {!(data.youtube_url === undefined) &&
+                                    <Link
+                                        to={{
+                                            pathname: data.youtube_url
+                                        }}
+                                        target="_blank"
+                                    >
+                                        <i className="fab fa-youtube"></i>
+                                    </Link>
+                                }
                             </div>
                         </div>
                     </div>
