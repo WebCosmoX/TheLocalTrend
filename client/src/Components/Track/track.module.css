@@ -1,16 +1,16 @@
 .container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 93vw;
     padding: 0 10px 16px 10px;
     margin-top: 25px;
     border-bottom: 2px solid var(--grey);
     color: var(--white);
-}   
+}
 
-.track_art{
-    width: 35px;
-    height: 35px;
+.music_icon i{
+    color: var(--yellow);
 }
 
 .track_details{
@@ -33,7 +33,7 @@
     margin-top: 7px;
     font-family: var(--mulish);
     font-size: 15px;
-    color: var(--greyscript);
+    color: var(--white);
 }
 
 
@@ -67,13 +67,12 @@
         padding: 0 30px 16px 10px;
     }
 
-    .track_art{
-        width: 45px;
-        height: 45px;
+    .music_icon i{
+        font-size: 18px;
     }
 
     .track_details{
-        width: 70%;
+        width: 80%;
     }
 
     .stream_links i{

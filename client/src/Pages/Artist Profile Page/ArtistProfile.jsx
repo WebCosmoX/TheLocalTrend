@@ -20,7 +20,9 @@ export default function ArtistProfile() {
         window.addEventListener("resize", setWidth(window.innerWidth));
         checkWindowSize();
         scrollToTop();
-        console.log(data);
+        data.songs.map(item => {
+            console.log(item.song_name);
+        })
 
         return () => {
             window.removeEventListener("resize", setWidth(window.innerWidth));
@@ -142,14 +144,9 @@ export default function ArtistProfile() {
                     <div className={classes.section_header}>
                         popular tracks
                     </div>
-                    <Track />
-                    <Track />
-                    <Track />
-                    <Track />
-                    <Track />
-                    <Track />
-                    <Track />
-                    <Track />
+                    {data.songs.map(item => {
+                        return <Track data={item}/>
+                    })}
                 </section>
                 <Footer />
             </div>
