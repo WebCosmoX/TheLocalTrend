@@ -3,19 +3,11 @@
     justify-content: space-between;
     align-items: center;
     align-self: center;
-    width: 100%;
+    width: 90vw;
     margin-top: 30px;
     padding: 10px;
     border-radius: 5px;
-    cursor: pointer;
     border-right: 5px inset var(--yellow);
-}
-
-.outer{
-    align-self: center;
-    color: var(--white);
-    text-decoration: none;
-    width: 90%;
 }
 
 .container:hover{
@@ -26,9 +18,10 @@
 .container img {
     display: block;
     border-radius: 5px;
-    width: 45%;
-    height: auto;
+    width: 150px;
+    height: 100px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .details_container{
@@ -43,16 +36,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 48%;
+    width: max-content;
     margin-top: 30px;
 }
 
 .social_links i{
     font-size: 16px;
+    color: var(--white);
+    margin-right: 12px;
 }
 
 .social_links i:hover{
     color: var(--yellow);
+    text-decoration: none;
 }
 
 .artist_name {
@@ -94,11 +90,12 @@
 
     .social_links{
         margin-top: 12px;
-        width: 38%;
+        width: max-content;
     }
 
     .social_links i{
         font-size: 16px;
+        margin-right: 16px;
     }
 
     .artist_name{

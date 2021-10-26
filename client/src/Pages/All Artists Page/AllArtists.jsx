@@ -38,7 +38,6 @@ export default function AllArtists() {
             baseurl.get('artists')
                 .then(data => {
                     setLoading(false);
-                    console.log(data.data.artists);
                     setArtists(data.data.artists);
                 })
         } catch {
