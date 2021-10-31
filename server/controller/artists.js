@@ -43,7 +43,7 @@ exports.get_all_artists = async (req, res) => {
 exports.get_artist_by_id = async (req, res) => {
     try {
         const id = req.params.artist_id;
-        const artist = await Artist.findById(id);
+        const artist = await (await Artist.findById(id).populate('songs'));
         return res.status(200).json({ artist });
     } catch (err) {
         return res.status(500).json({ error: err.msg });
